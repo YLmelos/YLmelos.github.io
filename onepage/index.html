@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+
+    <style>
+        html {
+            -webkit-scroll-behavior: smooth;
+            -ms-scroll-behavior: smooth;
+            scroll-behavior: smooth;
+        }
+
+        * {
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .all {
+            width: 100%;
+            height: 100%;
+        }
+
+        .clearber {
+            clear: both;
+        }
+
+        .floatL {
+            float: left;
+        }
+
+        .floatR {
+            float: right;
+        }
+
+        .container {
+            max-width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .header {
+            width: 100%;
+            height: 7vh;
+            background: linear-gradient(to bottom, rgb(236, 236, 236) 1%, rgba(255, 255, 255, 1) 100%);
+            position: fixed;
+            top: 0;
+            box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        .header img {
+            max-width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            display: block;
+            padding-top: 10px;
+        }
+
+        .banner {
+            width: 100%;
+            height: 50vh;
+            margin-top: 7vh;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(01-material/imgb-11.png);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .banner .container {
+            padding: 25vh 0;
+        }
+
+        .banner span {
+            margin: 50% 0;
+            background-color: #0004;
+            color: #fff;
+            font-weight: 800;
+            padding: 2% 10%;
+            font-size: 30px;
+            font-family: 微軟正黑體;
+            letter-spacing: 10px;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 5vh;
+            padding: 1.7vh 0;
+            position: sticky;
+            top: 6.7vh;
+            background-color: #fff;
+            box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        .navbox {
+            text-align: center;
+            min-width: 300px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .nav {
+            width: calc((100% - 10px)/ 6);
+            margin: 0 5px;
+            color: #000;
+            font-family: 微軟正黑體;
+            font-weight: 800;
+            font-size: 14px;
+            display: inline-block;
+        }
+
+        .conten1 {
+            width: 100%;
+            margin-top: 5vh;
+        }
+
+        .conten2 {
+            width: 100%;
+            margin-bottom: 5vh;
+        }
+
+        .box1 {
+            width: 50%;
+            height: 50vh;
+        }
+
+        .boximg,
+        .boximg2 {
+            width: 94%;
+            height: 94%;
+            background-color: #000;
+            margin: 3%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .boximg img {
+            width: 100%;
+            position: absolute;
+            top: -0%;
+            transform: scale(1.4);
+        }
+
+        .boximg2 img {
+            width: 100%;
+            position: absolute;
+            top: 0%;
+            transform: scale(1.1);
+        }
+
+        .boxtext {
+            width: 100%;
+            height: 50vh;
+            padding: 15vh 1vw;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .conten5 {
+            width: 100%;
+        }
+
+        .conten5 .container {
+            width: 100%;
+        }
+
+        .box2 {
+            width: calc((100% - 6vh)/3);
+            height: 50vh;
+            margin: 0 1vh;
+            background-color: #000;
+            margin-bottom: 5vh;
+        }
+
+        .imgbox2 {
+            height: 80%;
+            width: 100%;
+            background-color: #666;
+            background-size: cover;
+            background-position: 0, -100;
+            background-repeat: no-repeat;
+        }
+
+        .imgbox2 img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .textbox2 {
+            height: 20%;
+            width: 100%;
+            background-color: #111;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .conten4 {
+            width: 100%;
+            padding-top: 10vh;
+            margin-top: -10vh;
+        }
+
+        .textbox3 {
+            width: 60%;
+            height: 100%;
+            padding: 5vh 1vw;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .textbox3 h1 {
+            margin: 0;
+        }
+
+        .conten3 {
+            height: 100vh;
+            background-image: url("01-material/imgb-10.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 0 10px;
+            background-attachment: fixed;
+        }
+
+        .conten6 {
+            width: 100%;
+        }
+
+        .box4 {
+            width: 50%;
+            height: 50vh;
+        }
+
+        .box4.floatL {
+            background-color: #aaa;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("01-material/imgb-07.jpg");
+            background-size: cover;
+            background-position: 0 -15vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box4.floatR {
+            background-color: #aaa;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("01-material/imgb-08.jpg");
+            background-size: cover;
+            background-position: 0 -15vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .textbox4 {
+            width: 60%;
+            text-align: center;
+        }
+
+        .footer {
+            width: 100%;
+            height: 5vh;
+        }
+
+        .footer .container {
+            padding: 1.5vh 0;
+        }
+
+        .footer-text {
+            text-align: center;
+            height: 100%;
+            font-family: 微軟正黑體;
+        }
+
+        .textbox2 {
+            padding: 8px;
+        }
+
+        @media only screen and (max-width: 1200px) {
+
+            .box1 {
+                width: 100%;
+            }
+
+            .boximg img {
+                top: -90%;
+            }
+
+            .boxtext {
+                padding: 15vh 4vw;
+            }
+
+            .textbox2 {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                height: 90px;
+                text-align: center;
+                font-size: 22px;
+                padding: 1vh;
+            }
+
+            .textbox3 {
+                padding: 20vh 1vw;
+            }
+
+            .box4 {
+                width: 100%;
+                height: 50%;
+            }
+
+            .textbox4 {
+                top: 20%;
+                left: 20vw;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .boxtext {
+                padding: 4vh 4vw;
+            }
+
+            .box2 {
+                width: 100%;
+                height: 100%;
+                margin: 1vh 1vh;
+                background-color: #000;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="all" class="all">
+        <!-- ==========================================LOGO========================================== -->
+        <div id="header" class="header">
+            <div class="container">
+                <img src="01-material/Logo.jpg" alt="LOGO">
+            </div>
+        </div>
+        <!-- ==========================================banner========================================== -->
+        <div id="banner" class="banner">
+            <div class="container">
+                <span>Lorem, ipsum dolor.</span>
+            </div>
+        </div>
+        <!-- ==========================================navbar========================================== -->
+        <div id="navbar" class="navbar">
+            <div class="container">
+                <div class="navbox">
+                    <a href="#conten1" class="nav">關於郵差</a>
+                    <a href="#conten3" class="nav">中心思想</a>
+                    <a href="#conten4" class="nav">辛苦的人</a>
+                    <a href="#conten6" class="nav">更多故事</a>
+                    <a href="#banner" class="nav">回到TOP</a>
+                    <div class="clearber"></div>
+                </div>
+            </div>
+        </div>
+        <!-- ==========================================關於郵差========================================== -->
+        <div id="conten1" class="conten1">
+            <div class="container">
+                <div class="floatL box1">
+                    <div class="boximg">
+                        <img src="01-material/imgb-01.jpg" alt="img-01">
+                    </div>
+                </div>
+                <div class="floatR box1">
+                    <div class="boxtext">
+                        <h1>Lorem ipsum dolor sit amet.</h1>
+                        <span>Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Quia nesciunt reiciendis eum velit placeat ullam ducimus, voluptatum dolores
+                            architecto, quibusdam vitae blanditiis eligendi distinctio dolorem incidunt delectus quos
+                            beatae illo culpa, illum deleniti neque nemo saepe omnis? Molestias tempore magnam, ullam
+                            quod quam totam possimus ad laboriosam molestiae neque recusandae?</span>
+                    </div>
+                </div>
+                <div class="clearber"></div>
+            </div>
+        </div>
+        <div id="conten2" class="conten2">
+            <div class="container">
+                <div class="floatR box1">
+                    <div class="boximg2">
+                        <img src="01-material/imgb-02.jpg" alt="img-01">
+                    </div>
+                </div>
+                <div class="floatL box1">
+                    <div class="boxtext">
+                        <h1>Lorem ipsum dolor sit amet.</h1>
+                        <span>Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Quia nesciunt reiciendis eum velit placeat ullam ducimus, voluptatum dolores
+                            architecto, quibusdam vitae blanditiis eligendi distinctio dolorem incidunt delectus quos
+                            beatae illo culpa, illum deleniti neque nemo saepe omnis? Molestias tempore magnam, ullam
+                            quod quam totam possimus ad laboriosam molestiae neque recusandae?</span>
+                    </div>
+                </div>
+                <div class="clearber"></div>
+            </div>
+        </div>
+        <!-- ==========================================中心思想========================================== -->
+        <div id="conten3" class="conten3">
+            <div class="container"></div>
+        </div>
+        <!-- ==========================================辛苦的人========================================== -->
+        <div id="conten4" class="conten4">
+            <div class="container">
+                <div class="textbox3">
+                    <h1>Lorem ipsum dolor sit amet.</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis iure fugit, eligendi a dolore
+                        magnam ipsam porro, doloribus doloremque earum sunt? Ex vel consequatur libero laudantium
+                        voluptas nam nihil aliquam.</p>
+                </div>
+            </div>
+        </div>
+        <div id="conten5" class="conten5">
+            <div class="container">
+                <div class="box2 floatL ">
+                    <div class="imgbox2" style="background-image:url('01-material/imgb-03.jpg');"></div>
+                    <div class="textbox2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae culpa
+                        quasi nulla doloribus odit nam officia architecto velit iure laborum.</div>
+                </div>
+                <div class="box2 floatL ">
+                    <div class="imgbox2" style="background-image:url('01-material/imgb-04.jpg');"></div>
+                    <div class="textbox2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae culpa
+                        quasi nulla doloribus odit nam officia architecto velit iure laborum.</div>
+                </div>
+                <div class="box2 floatL ">
+                    <div class="imgbox2" style="background-image:url('01-material/imgb-05.jpg');"></div>
+                    <div class="textbox2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae culpa
+                        quasi nulla doloribus odit nam officia architecto velit iure laborum.</div>
+                </div>
+            </div>
+        </div>
+        <div class="clearber"></div>
+        <!-- ==========================================更多故事========================================== -->
+        <div id="conten6" class="conten6">
+            <div class="box4 floatL">
+                <div class="textbox4">
+                    <h1>Lorem ipsum dolor sit amet.</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem sapiente aliquam, sint, fugit
+                        distinctio similique provident voluptatum, quod impedit recusandae esse exercitationem
+                        nostrum.
+                        Nam, ducimus, et pariatur error quas eum consectetur nulla reiciendis iste cupiditate, cum
+                        rem
+                        aut. Exercitationem aspernatur laboriosam et fugiat, molestias recusandae, temporibus qui,
+                        necessitatibus quod molestiae dolor mollitia officia eum dolores ab minima? Officiis
+                        deserunt
+                        laudantium repellendus quibusdam, eaque tenetur error! Eligendi beatae fugit nemo ratione
+                        distinctio consequuntur deserunt dicta nisi voluptates earum. Autem et porro doloremque
+                        placeat
+                        voluptate, quos repellendus ratione soluta quaerat, laboriosam quidem ea aut commodi
+                        beatae?
+                        Sit quos beatae fugit nemo praesentium.</p>
+                </div>
+            </div>
+            <div class="box4 floatR">
+                <div class="textbox4">
+                    <h1>Lorem ipsum dolor sit amet.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, culpa maxime. Eius commodi
+                        illum
+                        ad esse repellendus, quisquam dolore laboriosam maiores non doloribus rem magnam cumque
+                        dolor
+                        veritatis ipsam provident quas sunt alias, in amet veniam accusantium atque? Non illo
+                        obcaecati
+                        voluptas veniam voluptates? Enim beatae tempore accusantium magnam laborum ratione,
+                        mollitia
+                        commodi dignissimos aut facere debitis incidunt doloribus molestiae dolore iure voluptates
+                        cum
+                        possimus temporibus reiciendis distinctio. Quidem quisquam sint, dolorum nostrum
+                        consectetur,
+                        rerum vero eum doloribus commodi quaerat ducimus unde pariatur sapiente blanditiis itaque
+                        cum
+                        eius fugit animi non ipsum. At quos esse velit amet assumenda, eaque nam.</p>
+                </div>
+            </div>
+            <div class="clearber"></div>
+        </div>
+        <!-- ==========================================頁尾========================================= -->
+        <div id="footer" class="footer">
+            <div class="container">
+                <div class="footer-text">中華郵政 版權所有 © 2013 Chunghwa Post All Rights Reserved.</div>　
+            </div>
+        </div>
+</body>
+
+</html>

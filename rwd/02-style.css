@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+    text-decoration:none;
+}
+
+body {
+    margin: 0;
+    background-color: #000;
+}
+.clear{
+    clear: both;
+}
+/* 設定全版面高度 */
+#all {
+    background-color: #ccc;
+    width: 100%;
+    height: 100vh;
+}
+.bcimg{
+    width: 100%;
+    height: 130vh;
+    position: fixed;
+    top: -10vh;
+    mix-blend-mode: lighten;
+    z-index: 1;
+    pointer-events: none;
+}
+/* NAVBAR */
+#navbar {
+    float: left;
+    background-color: rgb(92, 92, 92);
+    width: 320px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.navbox {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 25%;
+    height: 100%;
+}
+
+.navbox .logo {
+    max-width: 240px;
+    width: 100%;
+    background-color: aquamarine;
+    padding-top: 100%;
+    background-image: url("01-img/01-Logo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.navbox .navtext {
+    margin-top: 40px;
+}
+/* nav連結style */
+.navbox .navtext a {
+    text-align: center;
+    display: block;
+    margin: 30px auto;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 5% 0;
+    border-radius:18px; 
+    background-color: rgb(22, 22, 22);
+    transition: 0.3s;
+}
+.navbox .navtext a:hover{
+    background-color: #aaf;
+}
+.navbox .navtext a:active{
+    background-color: #77f;
+    transition:0.1s;
+    color:#fff;
+}
+
+/* 右側body */
+#block {
+    float: left;
+    background-color: #000;
+    width: calc(100% - 320px);
+    margin-left: 320px;
+    height: 100%;
+    position: relative;
+}
+
+.bigbox {
+    width: 100%;
+    max-width: 900px;
+    height: 700px;
+    background-color: #000;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.bigbox .box {
+    width: calc(100%/3);
+    height: 100%;
+    float: left;
+    background-size: cover;
+    background-position: 30% 0;
+    background-repeat: no-repeat;
+    filter: opacity(.5) blur(2px);
+    transition: 1s;
+}
+
+.box:hover {
+    filter: grayscale(0);
+    filter: opacity(1) blur(0px);
+}
+
+ .box.x {
+    background-image: url("01-img/03-player.jpg");
+    background-position: 35% 0;
+}
+
+.box.y {
+    background-image: url("01-img/02-player.jpg");
+}
+
+.box.z {
+    background-image: url("01-img/04-player.jpg");
+}
+
+.pc{
+    display: block;
+}
+.mobile{
+    display: none;
+}
+.ham{
+    position: absolute;
+    top:50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+@media(max-width:1280px){
+    .bigbox{
+        max-width: 800px;
+    }
+    .box.x{
+        width: 100%;
+        height: 50%;
+        background-position-y: 30%;
+    }
+    .box.y,.box.z {
+        width: 50%;
+        height: 50%;
+        background-position-y: 30%;
+    }
+}
+@media(max-width:1120px){
+    #navbar{
+        width: 100%;
+        height: 70px;
+        z-index: 1;
+    }
+    .navbox{
+        width: 95%;
+        padding: 0;
+        margin: 0 auto;
+        position: relative;
+    }
+    .navbox .logo{  
+        height: 100%;
+        width: 100%;
+        padding-top: 0;
+        max-height: 50px;
+        max-width: 50px;    
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%); 
+    }
+    .navbox .navtext{
+        margin: 0;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .navbox .navtext a{
+        float: left;
+        margin:0 20px;
+        padding: 2% 20px;
+        font-size: 15px;
+    }
+    /* 右側Body */
+    #block{
+        width: 100%;
+        height: calc(100% - 70px);
+        margin: 70px 0 0 0;
+    }
+    .bigbox{
+        width: 95%;
+        height: 95%;
+        max-width: 700px;
+        margin:0 auto;
+        max-height: 750px;
+    }
+    .bigbox .box{
+        filter: opacity(1) blur(0);
+    }
+}
+@media(max-width:550px){
+
+    .bigbox{
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+    }
+
+    .bigbox .box.x,.box.y,.box.z{
+        width: 100%;
+        height: calc(100%/3);
+        background-position: 0 20%;
+    }
+    .pc{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+    .navbox .logo{
+        transform: translate(-50%,-50%);
+        left: 50%;
+    }
+}
