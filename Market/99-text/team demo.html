@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .team {
+            display: flex;
+            height: 60vh;
+        }
+
+        .member {
+            border: 1px solid #000;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11);
+            font-size: 20px;
+            overflow: hidden;
+        }
+
+        .member>* {
+            width: 100%;
+            display: flex;
+            flex-grow: 1;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .member * {
+            transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), transform 0.8s 0.5s;
+            margin: 0;
+        }
+
+        .member.open {
+            flex-grow: 5;
+        }
+
+        .member.open>.name {
+            font-size: 2em;
+        }
+
+        .work {
+            transform: translateY(100%);
+        }
+
+        .member.open>.work {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <section id="section07">
+        <div class="team">
+            <div class="member member1">
+                <p class="name">陳仕凱</p>
+                <p class="work">企劃執行</p>
+            </div>
+            <div class="member member2">
+                <p class="name">蔡彰祐</p>
+                <p class="work">前端程式</p>
+            </div>
+            <div class="member member3">
+                <p class="name">詹介珉</p>
+                <p class="work">指導老師</p>
+            </div>
+            <div class="member member4">
+                <p class="name">黃柏鈞</p>
+                <p class="work">企劃統合</p>
+            </div>
+            <div class="member member5">
+                <p class="name">黃國豪</p>
+                <p class="work">視覺設計</p>
+            </div>
+            <div class="member member6">
+                <p class="name">黃字通</p>
+                <p class="work">資料蒐集</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const mumbers = document.querySelectorAll(".member");
+        let lastClickMumber = document.querySelector(".member");
+
+        function toggleOpen() {
+            if (this !== lastClickMumber) {
+                lastClickMumber.classList.remove('open');
+                lastClickMumber = this;
+            }
+            this.classList.toggle("open");
+        }
+
+        mumbers.forEach(mumber => mumber.addEventListener("click", toggleOpen));
+    </script>
+</body>
+
+</html>
