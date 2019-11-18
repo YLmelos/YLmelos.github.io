@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/loading.css">
+</head>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .all {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content {
+        width: 300px;
+    }
+    .box{
+        width: 300px;
+    }
+    .enterbtn {
+        background-color: #222;
+        padding: 10px 0;
+        text-align: center;
+        color: #fff;
+        transition: 0.3s;
+        width: 100px;
+        display: block;
+        margin:  0 auto;
+    }
+
+    .enterbtn:hover {
+        background-color: #444;
+
+    }
+.enterbtn:active{
+    background-color: #000;
+}
+    .text {
+        width: 100%;
+        padding: 5px;
+        margin-top: 10px;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none !important;
+        margin: 0;
+
+    }
+
+    .displaytext {
+        animation-name: find-top;
+        animation-duration: 1s;
+        margin-bottom: 10px;
+    }
+
+
+    .select-df {
+        display: flex;
+    }
+
+    .dn {
+        display: none;
+    }
+
+    .select {
+        width: 100%;
+        margin: 0 5px;
+        padding: 10px 0;
+        text-align: center;
+        background-color: #222;
+        color: #fff;
+    }
+
+    a {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .select:hover {
+        background-color: #444;
+        
+    }
+    .select:active{
+        background-color: #000;
+    }
+
+    .select-text {
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    .select-text2 {
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    @keyframes find-top {
+        0% {
+            transform: translateY(-10px);
+            color: #0000;
+        }
+
+        100% {
+            transform: translateY(0px);
+            color: #000;
+        }
+    }
+</style>
+
+<body>
+    <div class="loadingALL">
+        <div class="loadingall">
+            <div class="loadingbigbox">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p>(●゜▽゜●)</p>
+            </div>
+            <div class="loadingTTT">
+                <div class="loadingTEXT">
+                    <div class="loadingA"> Loading.</div>
+                    <div class="loadingA"> Loading..</div>
+                    <div class="loadingA"> Loading...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="all">
+        <div class="box">
+            <div class="select-box">
+                <div class="select-text">請選擇難度</div>
+                <div class="select-text2 dn">挖靠！你開外掛吧！<br>不然你就他媽就是個閒人...</div>
+                <div class="select-df">
+                    <a class="select easy">
+                        簡單
+                    </a>
+                    <a class="select norman dn">
+                        普通
+                    </a>
+                    <a class="select hard dn">
+                        困難
+                    </a>
+                    <a class="select Boos dn">
+                        地獄
+                    </a>
+                </div>
+            </div>
+            <div class="content dn">
+                <div class="textbox">
+                    <p class="displaytext">請於下方欄位輸入數字，並在顯示大或小之後再繼續猜測。</p>
+                </div>
+                <a class="enterbtn">
+                    發送
+                </a>
+                <input class="text" type="number">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var btn = document.querySelector(".enterbtn");
+        var inp = document.querySelector(".text");
+        var text = document.querySelector(".textbox");
+        var easy = document.querySelector(".easy");
+        var norman = document.querySelector(".norman");
+        var hard = document.querySelector(".hard");
+        var content = document.querySelector(".content")
+        var selectbox = document.querySelector(".select-box")
+        var selecttext = document.querySelector(".select-text")
+        var selecttext2 = document.querySelector(".select-text2")
+        var selectdf = document.querySelector(".select-df")
+        var Boos = document.querySelector(".Boos")
+
+
+
+
+        easy.onclick = function () {
+            X = getRandom(10)
+            content.classList.remove("dn");
+            selectbox.classList.add("dn");
+            norman.classList.remove("dn");
+            selectdf.innerHTML=''
+            
+        }
+
+        norman.onclick = function () {
+            X = getRandom(1000)
+            content.classList.remove("dn");
+            selectbox.classList.add("dn");
+            hard.classList.remove("dn");
+        }
+
+        hard.onclick = function () {
+            X = getRandom(100000)
+            content.classList.remove("dn");
+            selectbox.classList.add("dn");
+            Boos.classList.remove("dn");
+        }
+
+        Boos.onclick = function () {
+            X = getRandom(10000000000000000000000000000000000000000)
+            content.classList.remove("dn");
+            selectbox.classList.add("dn");
+            selecttext.classList.add("dn");
+            selecttext2.classList.remove("dn");
+            console.log(X);
+        }
+
+
+
+
+        btn.onclick = function () {
+            var A = inp.value;
+            if (A == X) {
+                content.classList.add("dn");
+                selectbox.classList.remove("dn");
+                selecttext.innerHTML = '恭喜，答對囉！</br>選下個難度吧';
+            } else {
+                if (A >= X) {
+                    console.log(text.innerHTML)
+                    text.innerHTML = '<p class="displaytext">小一點</p>';
+                } else {
+                    text.innerHTML = '<p class="displaytext">大一點</p>';
+                }
+            }
+        }
+
+        function getRandom(ques) {
+            return Math.floor(Math.random() * ques + 1);
+        }
+    </script>
+</body>
+
+</html>
