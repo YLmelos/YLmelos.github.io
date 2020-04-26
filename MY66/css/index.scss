@@ -1,0 +1,736 @@
+@import "./variable";
+// @import "./_functions.scss";
+
+
+#navbar {
+    display: none;
+    z-index: 20;
+
+    @include rwd($phone) {
+        display: flex;
+    }
+}
+
+#HomeNavbar {
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    @include rwd($phone) {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+
+        @include rwd($pc) {
+            max-width: 1110px;
+        }
+
+        @include rwd($pad) {
+            max-width: 768px;
+        }
+
+
+        .row {
+            height: 100%;
+            align-items: center;
+            background-color: #FFF;
+            margin: 0;
+            border-radius: 0px 0px 15px 15px;
+            box-shadow: 0px 0px 5px #25252580;
+
+            .logo_area {
+                padding-left: 65px;
+
+                @include rwd($pad) {
+                    padding-left: 15px;
+                }
+
+                a {
+                    &:hover {
+                        color: none;
+                        text-decoration: none;
+                    }
+
+                    span {
+                        font-size: 26px;
+                        color: $input_icon_gray;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+    .menu_area {
+        padding-right: 65px;
+
+        @include rwd($pad) {
+            padding-right: 15px;
+        }
+
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            list-style: none;
+            font-size: $fs-18;
+            font-weight: bold;
+
+            li {
+                margin-right: 25px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &:hover {
+
+                    &:nth-child(1) {
+                        border-bottom: 2px solid $red;
+                    }
+
+                    &:nth-child(2) {
+                        border-bottom: 2px solid $red;
+                    }
+
+                }
+
+                a {
+                    color: $input_icon_gray;
+                    text-decoration: none;
+                }
+            }
+
+            .relative {
+                position: relative;
+
+                input {
+                    padding-left: 9px;
+                    width: 160px;
+                    height: 30px;
+                    font-weight: normal;
+                }
+
+                .icon_position {
+                    position: absolute;
+                    top: 0;
+                    right: 1px;
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    i {
+                        color: $input_icon_gray;
+                        font-size: $fs-15;
+                    }
+                }
+            }
+
+            .logo_in_btn {
+                width: 60px;
+                height: 30px;
+                border-radius: 2px;
+                background-color: $red;
+                margin-right: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                a {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+main {
+    @include rwd($phone) {
+        padding-top: 60px;
+    }
+
+    #header {
+        width: 100%;
+        height: 760px;
+        z-index: -1;
+        clip-path: circle(2824px at 50% -2065px);
+
+        @include rwd($pc) {
+            height: 475px;
+            clip-path: circle(2824px at 50% -2375px);
+        }
+
+        @include rwd($phone) {
+            height: 133px;
+            clip-path: circle(800px at 50% -670px);
+        }
+
+
+
+        .swiperbanner {
+            height: 100%;
+
+            .Banner {
+                width: 100%;
+                height: 100%;
+                background-color: #CCC;
+                background-image: url("../img/homeBanner.jpg");
+                background-size: cover;
+                background-position: 10%;
+            }
+
+            .bannernext {
+                right: 30px;
+
+                &::after {
+                    content: url(../img/BannerRight.png);
+                }
+            }
+
+            .bannerprev {
+                left: 30px;
+
+                &::after {
+                    content: url(../img/BannerLeft.png);
+                }
+            }
+        }
+
+    }
+
+    #btnCase {
+        position: relative;
+        margin-top: -260px;
+        width: 100%;
+
+        @include rwd($phone) {
+            margin: 0;
+        }
+
+        .SignBtn {
+            width: 100%;
+            margin-bottom: 30px;
+            margin-top: 10px;
+
+            @include rwd($phone) {
+                margin-bottom: 10px;
+            }
+
+
+            .container {
+                padding-left: 85px;
+                font-size: 0;
+
+                @include rwd($pc) {
+                    padding-left: 100px;
+                }
+
+                @include rwd($pad) {
+                    padding-left: 0;
+                }
+
+                @include rwd($phone) {
+                    padding: 0px 15px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                a {
+                    @include rwd($phone) {
+                        width: calc(100% - 10px);
+                    }
+
+                    .btn {
+                        background-color: $white;
+                        width: 180px;
+                        height: 65px;
+                        border: 0;
+
+                        @include rwd($phone) {
+                            width: 100%;
+                            height: 55px;
+                            box-shadow: 0px 0px 5px #25252580;
+                        }
+
+                        span {
+                            font-size: $fs-24;
+                            font-weight: bold;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            &::before {
+                                content: "";
+                                margin-right: 15px;
+                            }
+                        }
+                    }
+                }
+
+                a:nth-child(1) {
+                    margin-right: 5px;
+
+                    .btn {
+                        span {
+                            &::before {
+                                content: url("../img/SellerIcon.png");
+                            }
+                        }
+                    }
+                }
+
+                a:nth-child(2) {
+                    margin-left: 5px;
+
+                    .btn {
+
+
+                        span {
+                            &::before {
+                                content: url("../img/BuyerIcon.png");
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .GoodsBtn {
+            width: 100%;
+
+            .container {
+                padding: 0 65px;
+                width: 100%;
+
+                @include rwd($pc) {
+                    padding: 0 80px;
+
+                }
+
+                @include rwd($pad) {
+                    padding: 0;
+                    max-width: 720px;
+
+                }
+
+
+                @include rwd($phone) {
+                    padding: 0 15px;
+                    max-width: 540px;
+                }
+
+                .row {
+                    width: 100%;
+                    height: 250px;
+                    background-color: #fff;
+                    padding: 20px;
+                    border-radius: 15px;
+                    box-shadow: 0px 0px 5px #25252580;
+                    margin: 0;
+
+                    @include rwd($phone) {
+                        height: 290px;
+                    }
+
+                    a {
+                        padding: 0;
+                        background-size: cover;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        &::before {
+                            margin-right: 15px;
+
+                            @include rwd($phone) {
+                                margin-right: 35px;
+                            }
+                        }
+
+                        span {
+                            font-size: $fs-36;
+                            font-weight: bold;
+                            color: #fff;
+
+                        }
+                    }
+
+                    a:nth-child(1) {
+                        background-image: url(../img/bg1.png);
+                        background-color: $red;
+
+                        &::before {
+                            content: url(../img/meet.png);
+                        }
+                    }
+
+                    a:nth-child(2) {
+                        background-image: url(../img/bg2.png);
+                        background-color: $blue;
+
+                        &::before {
+                            content: url(../img/fish.png);
+                        }
+                    }
+
+                    a:nth-child(3) {
+                        background-image: url(../img/bg3.png);
+                        background-color: $go_to_top_orange;
+                        position: relative;
+                        pointer-events: none; //串透指令
+
+                        &::before {
+                            content: url(../img/sausage.png);
+                        }
+
+                        .cover {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #000c;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            span {
+                                border: 2px solid;
+                                border-radius: 8px;
+                                padding: 9px 18px;
+                                font-size: $fs-24;
+                                font-weight: normal;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #content {
+        padding-top: 78px;
+
+        @include rwd($phone) {
+            padding-top: 50px;
+        }
+
+        .HotSeller {
+            .container {
+                position: relative;
+
+                @include rwd($pc) {
+                    max-width: 830px;
+                }
+
+                @include rwd($pad) {
+                    max-width: 550px;
+                }
+
+                @include rwd($phone) {
+                    max-width: 255px;
+                }
+
+                .Hottitle {
+                    text-align: center;
+
+                    span {
+                        padding: 0 20px;
+                        font-size: $fs-36;
+                        font-weight: bold;
+                        border-right: solid 2px #000;
+                        border-left: solid 2px #000;
+                        display: inline-block;
+                    }
+                }
+
+                .swiPer {
+                    padding: 45px 10px 10px;
+                    width: calc(100% + 20px);
+                    margin-left: -10px;
+                    position: unset;
+
+                    .card {
+                        width: 100%;
+                        border-radius: 0;
+                        box-shadow: 0px 0px 3px rgba(37, 37, 37, 0.35);
+
+                        .card-img-top {
+                            width: 100%;
+                            height: 180px;
+                            padding: 10px;
+                            position: relative;
+
+                            .overflowH {
+                                width: 100%;
+                                height: 100%;
+                                overflow: hidden;
+
+
+                                img {
+                                    width: 100%;
+                                }
+                            }
+
+                            .iconbox {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                .Circle {
+                                    width: 85px;
+                                    height: 85px;
+                                    background-color: rgba(0, 0, 0, 0.7);
+                                    border-radius: 50%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    flex-direction: column;
+
+                                    .icon {
+                                        background-image: url(../img/meet-white-08.png);
+                                        width: 29px;
+                                        height: 25px;
+                                    }
+
+                                    span {
+                                        margin-top: 8px;
+                                        font-size: $fs-18;
+                                        color: $white;
+                                    }
+                                }
+                            }
+                        }
+
+                        .card-body {
+                            padding: 10px 10px 0px 10px;
+
+                            .card-title {
+                                text-align: center;
+                                font-size: 22px;
+                                font-weight: bold;
+                                text-align: justify;
+                                text-align-last: center;
+                                letter-spacing: 2.5;
+                            }
+
+                            .card-text {
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 2;
+                                font-size: $fs-18;
+                                color: $input_icon_gray;
+                                text-align: justify;
+                                margin-bottom: 20px;
+                                line-height: 1.3;
+                            }
+
+                        }
+
+                        .btn-primary {
+                            width: 100%;
+                            height: 40px;
+                            background-color: $blue;
+                            border-radius: 0;
+                            font-size: $fs-18;
+                            font-weight: bold;
+                            border-color: rgba(0, 0, 0, 0);
+                        }
+                    }
+
+                    .swiper-button-prev {
+                        position: absolute;
+                        left: -20px;
+                        transform: translate(-50%, 50%);
+
+                        @include rwd($phone) {
+                            left: -10px;
+                        }
+
+                        &::after {
+                            content: url(../img/swiperLeft.png);
+                        }
+                    }
+
+                    .swiper-button-next {
+                        position: absolute;
+                        right: -20px;
+                        transform: translate(50%, 50%);
+
+                        @include rwd($phone) {
+                            right: -10px;
+                        }
+
+                        &::after {
+                            content: url(../img/swiperRight.png);
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .Hotcommodity {
+            padding-top: 90px;
+            @include rwd($phone){
+                padding-top: 45px ;
+            }
+            .container {
+                position: relative;
+
+                @include rwd($pc) {
+                    max-width: 830px;
+                }
+
+                @include rwd($pad) {
+                    max-width: 550px;
+                }
+
+                @include rwd($phone) {
+                    max-width: 255px;
+                }
+
+                .Hottitle {
+                    text-align: center;
+
+                    span {
+                        padding: 0 20px;
+                        font-size: $fs-36;
+                        font-weight: bold;
+                        border-right: solid 2px #000;
+                        border-left: solid 2px #000;
+                        display: inline-block;
+                    }
+                }
+
+                .swiPer {
+                    padding: 45px 10px 10px;
+                    width: calc(100% + 20px);
+                    margin-left: -10px;
+                    position: unset;
+
+
+                    .card {
+                        width: 100%;
+                        border-radius: 0;
+                        box-shadow: 0px 0px 5px #25252580;
+
+
+                        .card-img-top {
+                            width: 100%;
+                            height: 180px;
+                            padding: 10px;
+                            position: relative;
+
+                            .overflowH {
+                                width: 100%;
+                                height: 100%;
+                                overflow: hidden;
+
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                        }
+
+                        .card-body {
+                            padding: 10px 10px 0px 10px;
+                            display: flex;
+                            flex-direction: column-reverse;
+
+                            .card-title {
+                                font-size: $fs-24;
+                                font-weight: bold;
+                                letter-spacing: 2.5;
+                                text-align: center;
+                                margin-bottom: 20px;
+                            }
+
+                            .card-text {
+                                text-align: center;
+                                font-size: sf-18;
+                                text-align: justify;
+                                text-align-last: center;
+                                letter-spacing: 2.5;
+                                padding-bottom: 10px;
+
+                                span:nth-child(2) {
+                                    border-left: solid 1px #000;
+                                    padding-left: 10px;
+                                    margin-left: 10px;
+                                    display: inline-block;
+
+                                }
+
+                                line-height: 1.3;
+                            }
+
+                        }
+
+                        .btn-primary {
+                            width: 100%;
+                            height: 40px;
+                            background-color: $blue;
+                            border-radius: 0;
+                            font-size: $fs-18;
+                            font-weight: bold;
+                            border-color: rgba(0, 0, 0, 0);
+                        }
+                    }
+
+                    .swiper-button-prev {
+                        position: absolute;
+                        left: -20px;
+                        transform: translate(-50%, 50%);
+
+                        @include rwd($phone) {
+                            left: -10px;
+                        }
+
+                        &::after {
+                            content: url(../img/swiperLeft.png);
+                        }
+                    }
+
+                    .swiper-button-next {
+                        position: absolute;
+                        right: -20px;
+                        transform: translate(50%, 50%);
+
+                        @include rwd($phone) {
+                            right: -10px;
+                        }
+
+                        &::after {
+                            content: url(../img/swiperRight.png);
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    margin-top: 360px;
+
+    @include rwd($phone) {
+        margin-top: 100px;
+    }
+}

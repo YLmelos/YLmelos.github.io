@@ -1,0 +1,191 @@
+#btn_group .container .nav {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  #btn_group .container .nav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  #btn_group .container .nav li:nth-child(2) {
+    margin: 0 10px;
+  }
+}
+
+#btn_group .container .nav li:last-child {
+  position: absolute;
+  right: 0;
+}
+
+@media (max-width: 767px) {
+  #btn_group .container .nav li:last-child {
+    position: unset;
+    margin-top: 13px;
+  }
+}
+
+#btn_group .container .nav li:last-child a {
+  width: 100px;
+  height: 35px;
+  display: inline-block;
+  background-color: #0A599A;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 35px;
+  border-radius: 2px;
+  margin-left: 20px;
+}
+
+@media (max-width: 767px) {
+  #btn_group .container .nav li:last-child a {
+    margin-left: 0;
+    margin: 0 7px;
+  }
+}
+
+#btn_group .container .nav .nav-item .nav-link {
+  width: 100px;
+  height: 35px;
+  border-radius: 2px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 35px;
+  padding: 0;
+  margin-right: 20px;
+  border: 0.5px solid #919191;
+  color: #000000;
+}
+
+#btn_group .container .nav .nav-item .nav-link.active {
+  background-color: #E2920A;
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  #btn_group .container .nav .nav-item .nav-link {
+    margin-right: 0;
+  }
+}
+
+#btn_group .container #pills-tabContent #pills-home form {
+  margin-bottom: 35px;
+}
+
+@media (max-width: 767px) {
+  #btn_group .container #pills-tabContent #pills-home form {
+    padding: 0 30px;
+  }
+}
+
+#btn_group .container #pills-tabContent #pills-home form .info {
+  -webkit-box-shadow: 0 0 15px -10px;
+          box-shadow: 0 0 15px -10px;
+  padding: 10px;
+}
+
+#btn_group .container #pills-tabContent #pills-home form .info .photo img {
+  width: 100%;
+}
+
+#btn_group .container #pills-tabContent #pills-home form .info .name_area {
+  padding: 30px 0;
+}
+
+#btn_group .container #pills-tabContent #pills-home form .info .name_area .origin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#btn_group .container #pills-tabContent #pills-home form .info .name_area .origin span {
+  padding: 0 10px;
+  font-size: 18px;
+}
+
+#btn_group .container #pills-tabContent #pills-home form .info .name_area .origin span:first-child {
+  border-right: 1px solid #808080;
+}
+
+#btn_group .container #pills-tabContent #pills-home form .info .name_area .food_name {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+#btn_group .container #pills-tabContent #pills-home form .info .date {
+  padding: 35px 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#btn_group .container #pills-tabContent #pills-home form .info .date h2 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#btn_group .container #pills-tabContent #pills-home form .info .date p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#btn_group .container #pills-tabContent #pills-home form .info .date p:nth-child(3) {
+  line-height: 2;
+}
+
+#btn_group .container #pills-tabContent #pills-home form .info .date p:last-child {
+  margin-bottom: 0;
+}
+
+#btn_group .container #pills-tabContent #pills-home form .info .date p span {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#btn_group .container #pills-tabContent #pills-home form .info .input_area {
+  padding: 22px 0;
+}
+
+#btn_group .container #pills-tabContent #pills-home form .info .input_area input {
+  width: 100%;
+  height: 40px;
+  border-radius: 2px;
+  border: 1px solid #808080;
+  padding-left: 20px;
+}
+
+#btn_group .container #pills-tabContent #pills-home form .btn_group button {
+  height: 38px;
+  width: 100%;
+  background-color: #E2920A;
+  border: 0;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#btn_group .container #pills-tabContent #pills-home form .btn_group a {
+  display: block;
+  height: 38px;
+  width: 100%;
+  background-color: #0A599A;
+  border: 0;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 38px;
+}
+/*# sourceMappingURL=09- matchmaking.css.map */

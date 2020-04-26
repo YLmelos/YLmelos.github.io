@@ -1,0 +1,83 @@
+#QA_area .accordion .card .card-header {
+  text-decoration: none;
+  background-color: #ffffff;
+  padding: 0;
+}
+
+#QA_area .accordion .card .card-header .btn-link {
+  width: 100%;
+  min-height: 68px;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 23px 25px;
+  border: 0;
+  font-size: 24px;
+}
+
+#QA_area .accordion .card .card-header .btn-link:focus, #QA_area .accordion .card .card-header .btn-link:hover {
+  color: unset;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  #QA_area .accordion .card .card-header .btn-link {
+    display: block;
+    padding: 20px 23px 0px 23px;
+  }
+  #QA_area .accordion .card .card-header .btn-link span {
+    display: block;
+    text-align: justify;
+  }
+}
+
+#QA_area .accordion .card .card-header .btn-link i {
+  color: #0A5999;
+  font-size: 40px;
+  text-decoration: none;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+#QA_area .accordion .card .card-header .btn-link i:hover {
+  text-decoration: none;
+}
+
+#QA_area .accordion .card .card-header .btn.btn-link {
+  background-color: #0A5999;
+}
+
+#QA_area .accordion .card .card-header .btn.btn-link span {
+  color: #ffffff;
+}
+
+#QA_area .accordion .card .card-header .btn.btn-link i {
+  color: #ffffff;
+}
+
+#QA_area .accordion .card .card-header .btn.btn-link.collapsed {
+  background-color: #ffffff;
+}
+
+#QA_area .accordion .card .card-header .btn.btn-link.collapsed span {
+  color: black;
+}
+
+#QA_area .accordion .card .card-header .btn.btn-link.collapsed i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  color: #0A5999;
+}
+
+#QA_area .accordion .card-body {
+  font-size: 18px;
+  line-height: 2;
+}
+/*# sourceMappingURL=10-qa.css.map */

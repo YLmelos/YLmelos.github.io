@@ -1,0 +1,41 @@
+@import "./variable";
+
+#form_area{
+    form{
+        .form_block{ 
+            height: 50px;
+            margin-bottom: 30px;
+            &:nth-child(odd){
+                padding-right: 15px;
+            }
+            &:nth-child(even){
+                padding-left: 15px;
+            }
+            input{
+                width: 100%;
+                height: 50px;
+                padding-left: 10px;
+                border-radius: 2px;
+                border: 1px solid black;
+            }
+        }
+        .submit{
+            margin:30px auto 0 auto;
+            button{
+                width: 250px;
+                height: 70px;
+                background-color: #0A599A;
+                color: $white;
+                font-size: $fs-24;
+                font-weight: bold;
+                
+            }
+        }
+    }
+    textarea{
+        resize: none;
+        width: 100%;
+        height: 200px;
+        padding: 20px 15px;
+    }
+}

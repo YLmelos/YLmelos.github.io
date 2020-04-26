@@ -1,0 +1,207 @@
+@import"./variable";
+// @import "./_functions.scss";
+#anchor{
+    @include rwd($phone){
+        width: 100%;
+        height: 60px;
+    }
+}
+#header {
+    width: 100%;
+    padding-top: 30px;
+
+    .breadcrumb_box {
+        display: flex;
+        justify-content: space-between;
+
+
+        .breadcrumb {
+
+            background-color: transparent;
+            padding: 0;
+            margin: 0;
+
+            .breadcrumb-item {
+
+                &,
+                a {
+                    color: black;
+                    font-size: 16px;
+                    font-weight: 900;
+                }
+
+                i {
+                    color: black;
+                }
+
+                &:first-child {
+                    &::before {
+                        content: "";
+                    }
+                }
+
+                &::before {
+                    content: ">";
+                }
+            }
+        }
+
+        .back_buttn {
+            width: 130px;
+            height: 40px;
+            background-color: $blue;
+            color: $white;
+            border: 0;
+            border-radius: 3px;
+            font-size: $fs-18;
+            font-weight: bold;
+
+        }
+    }
+}
+
+#reg_title {
+    padding-top: 135px;
+
+    @include rwd($phone){
+        padding-top: 83px;
+    }
+
+    h2 {
+        font-size: $fs-36;
+        font-weight: bold;
+        padding-bottom: 25px;
+    }
+
+    p {
+        line-height: 28px;
+        font-size: $fs-18;
+    }
+}
+
+
+
+
+#reg_form {
+    margin-top: 100px;
+    @include rwd($phone){
+        margin-top: 50px;
+    }
+
+    h2 {
+        font-size: $fs-36;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: $fs-24;
+        padding: 25px 0 20px 0;
+    }
+
+    .arrow {
+        &::after {
+            content: "";
+            border-top: 10px solid #000;
+            border-right: 8px solid transparent;
+            border-left: 8px solid transparent;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 50px;
+        }
+
+
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+
+            &::-ms-expand {
+                display: none;
+            }
+        }
+    }
+
+
+    .form-row {
+        margin-right: -15px;
+
+        .form-group {
+            margin-bottom: 20px;
+            padding-right: 15px;
+
+            @include rwd($phone){
+                margin-bottom: 10px;
+            }
+        }
+
+        .form-control,
+        .custom-file-label {
+            height: 50px;
+            padding-left: 20px;
+            border: 1px solid #000;
+        }
+
+        .is-invalid {
+            width: 100%;
+        }
+
+
+
+        .custom-file {
+            height: 50px;
+
+            input,
+            .custom-file-label {
+                height: 50px;
+                display: flex;
+                align-items: center;
+                border: 1px solid #000;
+            }
+
+
+            .custom-file-label::after {
+                content: "選擇檔案";
+                background-color: #fff;
+                border: 1px solid #000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 150px;
+                height: 30px;
+                top: 50%;
+                right: 13px;
+                transform: translateY(-50%);
+            }
+
+        }
+
+        .textareasize {
+            height: 100px;
+
+            textarea {
+                resize: none;
+                height: 100%;
+            }
+        }
+    }
+
+    .photo-Text {
+        display: flex;
+        align-items: baseline;
+    }
+
+    .button_box {
+        display: flex;
+        justify-content: center;
+        padding-top: 45px;
+
+        button {
+            width: 180px;
+            height: 65px;
+            font-size: $fs-24;
+            font-weight: bold;
+            background-color: $blue;
+        }
+    }
+}

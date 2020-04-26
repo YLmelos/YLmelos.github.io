@@ -1,0 +1,264 @@
+.cover-bg {
+  background-image: url(/img/sign_bg.png);
+  background-position: center;
+  width: 4000px;
+  height: 4000px;
+  position: fixed;
+  top: -1080px;
+  -webkit-transform: translate(-500%, -50%);
+          transform: translate(-500%, -50%);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  z-index: -1;
+}
+
+main {
+  min-height: 0;
+}
+
+@media (max-width: 767px) {
+  main {
+    padding-top: 60px;
+  }
+}
+
+#header {
+  width: 100%;
+  padding-top: 30px;
+}
+
+#header .breadcrumb_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#header .breadcrumb_box .breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+#header .breadcrumb_box .breadcrumb .breadcrumb-item,
+#header .breadcrumb_box .breadcrumb .breadcrumb-item a {
+  color: black;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+#header .breadcrumb_box .breadcrumb .breadcrumb-item i {
+  color: black;
+}
+
+#header .breadcrumb_box .breadcrumb .breadcrumb-item:first-child::before {
+  content: "";
+}
+
+#header .breadcrumb_box .breadcrumb .breadcrumb-item::before {
+  content: ">";
+}
+
+#header .breadcrumb_box .back_buttn {
+  width: 130px;
+  height: 40px;
+  background-color: #0A599C;
+  color: #ffffff;
+  border: 0;
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#Sign_box .container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#Sign_box .container .row .col-10 {
+  background-color: #ffffff;
+  height: 500px;
+  -webkit-box-shadow: 0px 0px 5px #25252580;
+          box-shadow: 0px 0px 5px #25252580;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 767px) {
+  #Sign_box .container .row .col-10 {
+    margin-top: 90px;
+  }
+}
+
+#Sign_box .container .row .col-10 h2 {
+  padding: 0 20px;
+  font-size: 36px;
+  font-weight: bold;
+  border-right: solid 2px #000;
+  border-left: solid 2px #000;
+  display: inline-block;
+}
+
+#Sign_box .container .row .col-10 form {
+  padding-top: 60px;
+  width: 539px;
+}
+
+@media (max-width: 767px) {
+  #Sign_box .container .row .col-10 form {
+    width: auto;
+    padding-top: 50px;
+  }
+}
+
+#Sign_box .container .row .col-10 form .form-group {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  #Sign_box .container .row .col-10 form .form-group {
+    margin-bottom: 20px;
+  }
+}
+
+#Sign_box .container .row .col-10 form .form-control {
+  height: 50px;
+  border: #000 1px solid;
+}
+
+#Sign_box .container .row .col-10 form .form-check {
+  padding: 0;
+}
+
+#Sign_box .container .row .col-10 form .form-check button {
+  width: 100%;
+  margin-bottom: 25px;
+  height: 60px;
+  background-color: #0A599C;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  #Sign_box .container .row .col-10 form .form-check button {
+    margin-bottom: 10px;
+  }
+}
+
+#Sign_box .container .row .col-10 form .form-check .sign_bottom_all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  #Sign_box .container .row .col-10 form .form-check .sign_bottom_all {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#Sign_box .container .row .col-10 form .form-check .sign_bottom_all .sign_bottom_L {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+#Sign_box .container .row .col-10 form .form-check .sign_bottom_all .sign_bottom_L input[type=checkbox] {
+  visibility: hidden;
+}
+
+#Sign_box .container .row .col-10 form .form-check .sign_bottom_all .sign_bottom_L input[type="checkbox"]:checked + label::after,
+#Sign_box .container .row .col-10 form .form-check .sign_bottom_all .sign_bottom_L input[type="radio"]:checked + label::after {
+  font-family: "FontAwesome";
+  content: "\f00c";
+}
+
+#Sign_box .container .row .col-10 form .form-check .sign_bottom_all .sign_bottom_L .form-check-input {
+  margin: 0;
+  position: unset;
+  width: 18px;
+  height: 18px;
+  margin-right: 9px;
+}
+
+#Sign_box .container .row .col-10 form .form-check .sign_bottom_all .sign_bottom_L .form-check-label {
+  font-size: 18px;
+  color: #333333;
+}
+
+#Sign_box .container .row .col-10 form .form-check .sign_bottom_all .sign_bottom_L .form-check-label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 0;
+  border: 1px solid #000;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+#Sign_box .container .row .col-10 form .form-check .sign_bottom_all .sign_bottom_L .form-check-label::after {
+  display: inline-block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 0;
+  top: 0;
+  font-size: 18px;
+  color: #555555;
+}
+
+@media (max-width: 767px) {
+  #Sign_box .container .row .col-10 form .form-check .sign_bottom_all .sign_bottom_R {
+    padding-top: 15px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 -9px;
+  }
+}
+
+#Sign_box .container .row .col-10 form .form-check .sign_bottom_all .sign_bottom_R a {
+  padding: 0 9px;
+  font-size: 16px;
+  color: #333333;
+}
+
+#Sign_box .container .row .col-10 form .form-check .sign_bottom_all .sign_bottom_R a:nth-child(2) {
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+}
+/*# sourceMappingURL=04-Sign_in.css.map */

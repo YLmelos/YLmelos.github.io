@@ -1,0 +1,220 @@
+@charset "UTF-8";
+@media (max-width: 767px) {
+  #anchor {
+    width: 100%;
+    height: 60px;
+  }
+}
+
+#header {
+  width: 100%;
+  padding-top: 30px;
+}
+
+#header .breadcrumb_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#header .breadcrumb_box .breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+#header .breadcrumb_box .breadcrumb .breadcrumb-item,
+#header .breadcrumb_box .breadcrumb .breadcrumb-item a {
+  color: black;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+#header .breadcrumb_box .breadcrumb .breadcrumb-item i {
+  color: black;
+}
+
+#header .breadcrumb_box .breadcrumb .breadcrumb-item:first-child::before {
+  content: "";
+}
+
+#header .breadcrumb_box .breadcrumb .breadcrumb-item::before {
+  content: ">";
+}
+
+#header .breadcrumb_box .back_buttn {
+  width: 130px;
+  height: 40px;
+  background-color: #0A599C;
+  color: #ffffff;
+  border: 0;
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#reg_title {
+  padding-top: 135px;
+}
+
+@media (max-width: 767px) {
+  #reg_title {
+    padding-top: 83px;
+  }
+}
+
+#reg_title h2 {
+  font-size: 36px;
+  font-weight: bold;
+  padding-bottom: 25px;
+}
+
+#reg_title p {
+  line-height: 28px;
+  font-size: 18px;
+}
+
+#reg_form {
+  margin-top: 100px;
+}
+
+@media (max-width: 767px) {
+  #reg_form {
+    margin-top: 50px;
+  }
+}
+
+#reg_form h2 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+#reg_form h3 {
+  font-size: 24px;
+  padding: 25px 0 20px 0;
+}
+
+#reg_form .arrow::after {
+  content: "";
+  border-top: 10px solid #000;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 50px;
+}
+
+#reg_form .arrow select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+#reg_form .arrow select::-ms-expand {
+  display: none;
+}
+
+#reg_form .form-row {
+  margin-right: -15px;
+}
+
+#reg_form .form-row .form-group {
+  margin-bottom: 20px;
+  padding-right: 15px;
+}
+
+@media (max-width: 767px) {
+  #reg_form .form-row .form-group {
+    margin-bottom: 10px;
+  }
+}
+
+#reg_form .form-row .form-control,
+#reg_form .form-row .custom-file-label {
+  height: 50px;
+  padding-left: 20px;
+  border: 1px solid #000;
+}
+
+#reg_form .form-row .is-invalid {
+  width: 100%;
+}
+
+#reg_form .form-row .custom-file {
+  height: 50px;
+}
+
+#reg_form .form-row .custom-file input,
+#reg_form .form-row .custom-file .custom-file-label {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #000;
+}
+
+#reg_form .form-row .custom-file .custom-file-label::after {
+  content: "選擇檔案";
+  background-color: #fff;
+  border: 1px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 150px;
+  height: 30px;
+  top: 50%;
+  right: 13px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#reg_form .form-row .textareasize {
+  height: 100px;
+}
+
+#reg_form .form-row .textareasize textarea {
+  resize: none;
+  height: 100%;
+}
+
+#reg_form .photo-Text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+#reg_form .button_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 45px;
+}
+
+#reg_form .button_box button {
+  width: 180px;
+  height: 65px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #0A599C;
+}
+/*# sourceMappingURL=05-registered.css.map */

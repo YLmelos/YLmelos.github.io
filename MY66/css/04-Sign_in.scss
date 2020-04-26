@@ -1,0 +1,233 @@
+@import"./variable";
+// @import "./_functions.scss";
+
+
+.cover-bg {
+    background-image: url(/img/sign_bg.png);
+    background-position: center;
+    width: 4000px;
+    height: 4000px;
+    position: fixed;
+    top: -1080px;
+
+
+    transform: translate(-500%, -50%);
+    transform: rotate(45deg);
+    transform-origin: center;
+    z-index: -1;
+
+}
+
+main {
+    min-height: 0;
+
+    @include rwd($phone) {
+        padding-top: 60px;
+    }
+}
+
+#header {
+    width: 100%;
+    padding-top: 30px;
+
+    .breadcrumb_box {
+        display: flex;
+        justify-content: space-between;
+
+
+        .breadcrumb {
+
+            background-color: transparent;
+            padding: 0;
+            margin: 0;
+
+            .breadcrumb-item {
+
+                &,
+                a {
+                    color: black;
+                    font-size: 16px;
+                    font-weight: 900;
+                }
+
+                i {
+                    color: black;
+                }
+
+                &:first-child {
+                    &::before {
+                        content: "";
+                    }
+                }
+
+                &::before {
+                    content: ">";
+                }
+            }
+        }
+
+        .back_buttn {
+            width: 130px;
+            height: 40px;
+            background-color: $blue;
+            color: $white;
+            border: 0;
+            border-radius: 3px;
+            font-size: $fs-18;
+            font-weight: bold;
+
+        }
+    }
+}
+
+#Sign_box {
+    .container {
+        .row {
+            display: flex;
+            justify-content: center;
+
+            .col-10 {
+                background-color: $white;
+                height: 500px;
+                box-shadow: 0px 0px 5px #25252580;
+                margin-top: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                @include rwd($phone) {
+                    margin-top: 90px;
+                }
+
+                h2 {
+                    padding: 0 20px;
+                    font-size: $fs-36;
+                    font-weight: bold;
+                    border-right: solid 2px #000;
+                    border-left: solid 2px #000;
+                    display: inline-block;
+                }
+
+                form {
+                    padding-top: 60px;
+                    width: 539px;
+                    @include rwd($phone){
+                        width: auto;
+                        padding-top: 50px;
+                    }
+
+                    .form-group {
+                        margin-bottom: 30px;
+                        @include rwd($phone){
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                    .form-control {
+                        height: 50px;
+                        border: #000 1px solid;
+                    }
+
+                    .form-check {
+                        padding: 0;
+
+
+                        button {
+                            width: 100%;
+                            margin-bottom: 25px;
+                            height: 60px;
+                            background-color: $blue;
+                            font-size: $fs-24;
+                            font-weight: bold;
+                            @include rwd($phone){
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                        .sign_bottom_all {
+                            display: flex;
+                            justify-content: space-between;
+                           @include rwd($phone){
+                            flex-direction: column;
+                           }
+                            .sign_bottom_L {
+                                display: flex;
+                                align-items: center;
+                                position: relative;
+
+                              
+                                input[type=checkbox] {
+                                    visibility: hidden;
+                                }
+
+                                input[type="checkbox"]:checked+label::after,
+                                input[type="radio"]:checked+label::after {
+                                    font-family: "FontAwesome";
+                                    content: "\f00c";
+                                }
+
+                                .form-check-input {
+                                    margin: 0;
+                                    position: unset;
+                                    width: 18px;
+                                    height: 18px;
+                                    margin-right: 9px;
+
+                                }
+
+
+                                .form-check-label {
+                                    font-size: $fs-18;
+                                    color: $input_icon_gray;
+
+                                    &::before {
+                                        content: "";
+                                        display: inline-block;
+                                        position: absolute;
+                                        width: 18px;
+                                        height: 18px;
+                                        left: 0;
+                                        border: 1px solid #000;
+                                        border-radius: 3px;
+                                        background-color: #fff;
+                                    }
+
+                                    &::after {
+                                        display: inline-block;
+                                        position: absolute;
+                                        width: 18px;
+                                        height: 18px;
+                                        left: 0;
+                                        top: 0;
+                                        font-size: 18px;
+                                        color: #555555;
+                                    }
+                                }
+                            }
+
+                            .sign_bottom_R {
+                                @include rwd($phone){
+                                    padding-top: 15px;
+                                    flex-wrap: wrap;
+                                    display: flex;
+                                    margin: 0 -9px;
+                                }
+                                a {
+                                    padding: 0 9px;
+                                    font-size: $fs-16;
+                                    color: $input_icon_gray;
+                                }
+
+                                a:nth-child(2) {
+                                    border-right: 1px solid #000;
+                                    border-left: 1px solid #000;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

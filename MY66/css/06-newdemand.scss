@@ -1,0 +1,169 @@
+@import "./variable";
+
+#top_line{
+    margin-bottom: 50px !important;
+}
+#add_btn_area{
+    padding-bottom: 26px;
+    .container{
+       
+        .border-bottom{
+            border-bottom: 1px solid #CBCBCB;
+            padding-bottom: 26px;
+            a{
+                text-decoration: none;
+            }
+            .add_btn{
+                width: 180px ;
+                height: 65px ;
+                color: $white;
+                background-color: #0A599B;
+                font-size: $fs-24;
+                font-weight: bold;
+                text-align: center;
+                line-height: 65px;
+                border-radius: 7px;
+                cursor: pointer;
+                @include rwd($phone){
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+}
+#btn_group{
+    .container{
+        .nav{
+            position: relative;
+            margin-bottom: 30px;
+            @include rwd($phone){
+                flex-wrap: unset;
+
+            }
+            .nav-item{
+                .nav-link{
+                    width: 100px;
+                    height: 35px;
+                    border-radius: 2px;
+                    font-weight: bold;
+                    text-align: center;
+                    line-height: 35px;
+                    padding: 0;
+                    margin-right: 20px;
+                    border: 0.5px solid $border-gray;
+                    color: $black;
+                    &.active{
+                        background-color: $orange;
+                        color: $white;
+                    }
+
+                    @include rwd($phone){
+                        width: 89.5px;
+                        margin-right: 10px;
+
+                    }
+                }
+            }
+        }
+
+        #pills-tabContent{
+            #pills-home{
+                form{
+                    margin-bottom: 35px;
+                    @include rwd($phone){
+                        padding: 0 30px;
+                    }
+                    
+                    .info{
+                        box-shadow: 0 0 15px -10px;
+                        padding: 10px;
+                        .photo{
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        .name_area{
+                            padding: 30px 0;
+
+                            .origin{
+                                display: flex;
+                                justify-content: center;
+                                span{
+                                    padding: 0 10px ;
+                                    font-size: $fs-18;
+                                    &:first-child{
+                                        border-right: 1px solid #808080;
+                                    }
+                                }
+                            }
+                            .food_name{
+                                text-align: center;
+                                font-size: $fs-24;
+                                font-weight: bold;
+                                margin-top: 15px;
+                            }
+                        }
+                        .date{
+                            padding: 35px 0;
+                            border-top: 1px solid black;
+                            border-bottom: 1px solid black;
+                            h2{
+                                font-size: $fs-24;
+                                font-weight: bold;
+                                text-align: center;
+                                margin-bottom: 15px;
+                            }
+                            p{
+                                font-size: $fs-18;
+                                margin-bottom: 10px;
+                                &:nth-child(3){
+                                    line-height: 2;
+                                }
+
+                                &:last-child{
+                                    margin-bottom: 0;
+                                }
+                                span{
+                                    font-weight: bold;
+                                    font-size: $fs-16;
+                                }
+                            }
+                        }
+                        .input_area{
+                            padding: 22px 0;
+                            p{
+                                font-size: $fs-18;
+
+                                span{
+                                    font-weight: bold;
+                                    font-size: $fs-16;
+                                }
+                            }
+                        }
+                    }
+                    .btn_group{
+                        a,button{
+                            display: block;
+                            height: 38px;
+                            width: 100%;
+                            border: 0;
+                            color: $white;
+                            font-size: $fs-18;
+                            font-weight: bold;
+                            text-align: center;
+                            line-height: 38px;
+                            text-decoration: none;
+                        }
+                        .watch{
+                            background-color: #0A5998;
+                        }
+                        .end{
+                            background-color: #C32E27;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

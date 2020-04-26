@@ -1,0 +1,113 @@
+#top_line {
+  margin-bottom: 50px !important;
+}
+
+@media (max-width: 767px) {
+  #company, #contact, #certification {
+    padding: 0 15px;
+  }
+}
+
+#company .title, #contact .title, #certification .title {
+  border-bottom: 1px solid #CBCBCB;
+  padding-bottom: 16px;
+  margin-bottom: 25px;
+}
+
+#company .title h3, #contact .title h3, #certification .title h3 {
+  font-size: 36px;
+}
+
+#company .company_black, #contact .company_black, #certification .company_black {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 767px) {
+  #company .company_black, #contact .company_black, #certification .company_black {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+}
+
+#company .company_black .name, #contact .company_black .name, #certification .company_black .name {
+  background-color: #0A5999;
+  padding: 4px 10px;
+  color: #ffffff;
+  font-weight: bold;
+  margin-right: 21px;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+@media (max-width: 767px) {
+  #company .company_black .name, #contact .company_black .name, #certification .company_black .name {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+#company .company_black .content, #contact .company_black .content, #certification .company_black .content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  line-height: 26px;
+}
+
+@media (max-width: 767px) {
+  #company .company_black .content, #contact .company_black .content, #certification .company_black .content {
+    width: 100%;
+    -webkit-box-flex: unset;
+        -ms-flex-positive: unset;
+            flex-grow: unset;
+    -ms-flex-preferred-size: unset;
+        flex-basis: unset;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+#company .company_black .content .photo_box, #contact .company_black .content .photo_box, #certification .company_black .content .photo_box {
+  width: 255px;
+  height: 160px;
+}
+
+@media (max-width: 767px) {
+  #company .company_black .content .photo_box, #contact .company_black .content .photo_box, #certification .company_black .content .photo_box {
+    width: 100%;
+    height: unset;
+  }
+}
+
+#company .company_black .content .photo_box img, #contact .company_black .content .photo_box img, #certification .company_black .content .photo_box img {
+  width: 100%;
+}
+
+main .edit {
+  width: 250px;
+  height: 70px;
+  background-color: #0A5999;
+  display: block;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 70px;
+  text-align: center;
+  margin: 60px auto 0 auto;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+@media (max-width: 1200px) {
+  #certification .photo {
+    margin-bottom: 11px;
+  }
+}
+/*# sourceMappingURL=08- member_information.css.map */

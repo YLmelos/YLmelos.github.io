@@ -1,0 +1,72 @@
+@import "./variable";
+
+#QA_area{
+    .accordion{
+        .card{
+            .card-header{
+                text-decoration: none;
+                background-color: $white;
+                padding: 0;
+
+                .btn-link{
+                    width: 100%;
+                    min-height: 68px;
+                    color: black;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 23px 25px ;
+                    border: 0;
+                    font-size: $fs-24;
+                    &:focus,&:hover{
+                        color: unset;
+                        text-decoration: none;
+                    }
+
+                    @include rwd($phone) {
+                        display: block;
+                        padding: 20px 23px 0px 23px;
+                        span{
+                            display: block;
+                            text-align: justify;
+                        }
+                    }
+
+                    i{
+                        color: #0A5999;
+                        font-size: 40px;
+                        text-decoration: none;
+                        transform: rotate(0deg);
+                        &:hover{
+                            text-decoration: none;
+                        }
+                    }
+                }
+                .btn.btn-link{
+                    background-color: #0A5999;
+                    
+                    span{
+                        color:$white;
+                    }
+                    i{
+                        color: $white;
+                    }
+                }
+                .btn.btn-link.collapsed{
+                    background-color: $white;
+                    span{
+                        color: black;
+                    }
+                    i{
+                        transform: rotate(180deg);
+                        color: #0A5999;
+                    }
+                }
+            }
+        }
+        .card-body{
+            font-size: $fs-18;
+            line-height: 2;
+        }
+    }
+}

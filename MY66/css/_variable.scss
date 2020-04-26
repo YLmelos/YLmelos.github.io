@@ -1,0 +1,43 @@
+// 字級
+$fs-15:15px;
+$fs-16:16px;
+$fs-18:18px;
+$fs-20:20px;
+$fs-24:24px;
+$fs-26:26px;
+$fs-36:36px;
+$fs-45:45px;
+
+// 字色
+$white:#ffffff;
+$input_gray:#929292;
+$option_gary:#AFAFAF;
+$input_icon_gray:#333333;
+$black:#000000;
+
+//背景色
+$blue:#0A599C;
+$blue2:#0A599A;
+$hover_blue:#1D85BA;
+$red:#C72E27;
+$yellow:#FFFF00;
+$go_to_top_orange:#E4940A;
+$orange:#E2920A;
+$banner_black:#1A1A1A;
+$border_gray:#919191;
+$cover:rgba(66, 33, 11, 0.3);
+$mask_black: rgba($color: #000000, $alpha: 0.5);
+
+
+
+//media
+$pc:1200px;
+$pad:991px;
+$phone:767px;
+
+
+@mixin rwd($width) {
+    @media (max-width: $width) {
+        @content;
+    }
+}

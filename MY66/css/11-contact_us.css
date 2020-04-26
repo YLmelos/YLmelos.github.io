@@ -1,0 +1,41 @@
+#form_area form .form_block {
+  height: 50px;
+  margin-bottom: 30px;
+}
+
+#form_area form .form_block:nth-child(odd) {
+  padding-right: 15px;
+}
+
+#form_area form .form_block:nth-child(even) {
+  padding-left: 15px;
+}
+
+#form_area form .form_block input {
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+  border-radius: 2px;
+  border: 1px solid black;
+}
+
+#form_area form .submit {
+  margin: 30px auto 0 auto;
+}
+
+#form_area form .submit button {
+  width: 250px;
+  height: 70px;
+  background-color: #0A599A;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#form_area textarea {
+  resize: none;
+  width: 100%;
+  height: 200px;
+  padding: 20px 15px;
+}
+/*# sourceMappingURL=11-contact_us.css.map */

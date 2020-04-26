@@ -1,0 +1,464 @@
+#top_line {
+  margin-bottom: 50px !important;
+}
+
+#company, #contact {
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+
+@media (max-width: 767px) {
+  #company, #contact {
+    padding: 0 15px;
+  }
+}
+
+#company .mb-50, #contact .mb-50 {
+  margin-bottom: 50px;
+}
+
+#company .title, #contact .title {
+  padding-bottom: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+
+@media (max-width: 767px) {
+  #company .title, #contact .title {
+    display: unset;
+  }
+}
+
+#company .title h3, #contact .title h3 {
+  font-size: 36px;
+}
+
+@media (max-width: 767px) {
+  #company .title h3, #contact .title h3 {
+    text-align: center;
+  }
+}
+
+#company .title .check_box_area, #contact .title .check_box_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+  top: 8px;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#company .title .check_box_area input, #contact .title .check_box_area input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  width: 18px;
+  height: 18px;
+}
+
+#company .title .checkmark, #contact .title .checkmark {
+  position: absolute;
+  top: 0;
+  right: 120px;
+  height: 18px;
+  width: 18px;
+  background-color: white;
+  border: 1px solid #333333;
+  border-radius: 3px;
+}
+
+#company .title .check_box_area:hover input ~ .checkmark, #contact .title .check_box_area:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+#company .title .check_box_area input:checked ~ .checkmark, #contact .title .check_box_area input:checked ~ .checkmark {
+  background-color: black;
+}
+
+#company .title .checkmark:after, #contact .title .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+#company .title .check_box_area input:checked ~ .checkmark:after, #contact .title .check_box_area input:checked ~ .checkmark:after {
+  display: block;
+}
+
+#company .title .check_box_area .checkmark:after, #contact .title .check_box_area .checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#company .text_box, #contact .text_box {
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#company .text_box span, #contact .text_box span {
+  background-color: #0A5999;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px 10px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#company .input_box, #contact .input_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#company .input_box select, #contact .input_box select {
+  width: 100%;
+  height: 50px;
+  border-radius: 3px;
+  border: 1px solid black;
+  color: #AFAFAF;
+}
+
+#company .input_box select option, #contact .input_box select option {
+  width: 100%;
+}
+
+#company .input_box input, #contact .input_box input {
+  width: 100%;
+  height: 50px;
+  border-radius: 3px;
+  border: 1px solid black;
+  color: #AFAFAF;
+  padding-left: 10px;
+}
+
+#company .check_box_area, #contact .check_box_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#company .check_box_area input, #contact .check_box_area input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  width: 18px;
+  height: 18px;
+}
+
+#company .checkmark, #contact .checkmark {
+  position: absolute;
+  top: 0;
+  right: 80px;
+  height: 18px;
+  width: 18px;
+  background-color: white;
+  border: 1px solid #333333;
+  border-radius: 3px;
+}
+
+#company .check_box_area:hover input ~ .checkmark, #contact .check_box_area:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+#company .check_box_area input:checked ~ .checkmark, #contact .check_box_area input:checked ~ .checkmark {
+  background-color: black;
+}
+
+#company .checkmark:after, #contact .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+#company .check_box_area input:checked ~ .checkmark:after, #contact .check_box_area input:checked ~ .checkmark:after {
+  display: block;
+}
+
+#company .check_box_area .checkmark:after, #contact .check_box_area .checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#company .card_box, #contact .card_box {
+  margin-bottom: 50px;
+}
+
+#company .card_box .info, #contact .card_box .info {
+  -webkit-box-shadow: 0 0 15px -10px;
+          box-shadow: 0 0 15px -10px;
+  padding: 10px;
+}
+
+#company .card_box .info .photo img, #contact .card_box .info .photo img {
+  width: 100%;
+}
+
+#company .card_box .info .name_area, #contact .card_box .info .name_area {
+  padding-top: 20px;
+}
+
+@media (max-width: 767px) {
+  #company .card_box .info .name_area, #contact .card_box .info .name_area {
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+}
+
+#company .card_box .info .name_area .origin, #contact .card_box .info .name_area .origin {
+  padding-left: 10px;
+}
+
+#company .card_box .info .name_area .origin p, #contact .card_box .info .name_area .origin p {
+  font-size: 18px;
+}
+
+#company .card_box .info .name_area .origin p:first-child, #contact .card_box .info .name_area .origin p:first-child {
+  font-size: 22px;
+  font-weight: bold;
+  padding-bottom: 11px;
+}
+
+#company .card_box .info .name_area .food_name, #contact .card_box .info .name_area .food_name {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+#company .card_box .info .date, #contact .card_box .info .date {
+  padding: 20px 0 20px 10px;
+}
+
+#company .card_box .info .date p, #contact .card_box .info .date p {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#company .card_box .info .date p:first-child, #contact .card_box .info .date p:first-child {
+  margin-bottom: 10px;
+}
+
+#company .card_box .info .date p span, #contact .card_box .info .date p span {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+#company .card_box .info .input_area, #contact .card_box .info .input_area {
+  padding: 22px 0;
+}
+
+#company .card_box .info .input_area input, #contact .card_box .info .input_area input {
+  width: 100%;
+  height: 40px;
+  border-radius: 2px;
+  border: 1px solid #808080;
+  padding-left: 20px;
+}
+
+#company .card_box .btn_group a, #contact .card_box .btn_group a {
+  display: block;
+  height: 38px;
+  width: 100%;
+  background-color: #0A599A;
+  border: 0;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 38px;
+  text-decoration: none;
+}
+
+#company .card_box .btn_group a:hover, #contact .card_box .btn_group a:hover {
+  background-color: #1D85BA;
+}
+
+main .edit {
+  width: 250px;
+  height: 70px;
+  background-color: #0A5999;
+  display: block;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 70px;
+  text-align: center;
+  margin: 60px auto 0 auto;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 0;
+}
+
+.hr {
+  height: 1px;
+}
+
+.hr hr {
+  margin: 0;
+}
+
+.agree {
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+
+.agree .check_box_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-top: 18px;
+}
+
+.agree .check_box_area input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  width: 18px;
+  height: 18px;
+}
+
+.agree .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border: 1px solid #333333;
+  border-radius: 3px;
+}
+
+.agree .check_box_area:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.agree .check_box_area input:checked ~ .checkmark {
+  background-color: black;
+}
+
+.agree .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.agree .check_box_area input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.agree .check_box_area .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+select {
+  width: 100%;
+  height: 30px;
+  padding-left: 10px;
+  background-image: url("../img/arrow.png");
+  background-position: 98% 50%;
+  background-size: 3.5%;
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+  visibility: initial !important;
+}
+
+@media (max-width: 1200px) {
+  select {
+    max-width: 100%;
+  }
+}
+
+#check_box_area_row {
+  padding-top: 50px;
+}
+/*# sourceMappingURL=06-step2.css.map */

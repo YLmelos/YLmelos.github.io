@@ -1,0 +1,480 @@
+@import "./variable";
+
+// @import "./_functions.scss";
+main {
+    @include rwd($phone) {
+        padding-top: 60px;
+    }
+}
+
+#header {
+    width: 100%;
+    padding-top: 30px;
+
+    .breadcrumb_box {
+        display: flex;
+        justify-content: space-between;
+
+        @include rwd($phone) {
+            flex-direction: column;
+        }
+
+        .breadcrumb {
+
+            background-color: transparent;
+            padding: 0;
+            margin: 0;
+
+            .breadcrumb-item {
+
+                &,
+                a {
+                    color: black;
+                    font-size: 16px;
+                    font-weight: 900;
+                    ;
+                }
+
+                i {
+                    color: black;
+                }
+
+                &:first-child {
+                    &::before {
+                        content: "";
+                    }
+                }
+
+                &::before {
+                    content: ">";
+                }
+            }
+        }
+
+        .goback {
+            @include rwd($phone) {
+                width: 130px;
+                align-self: center;
+                padding-top: 20px;
+                padding-bottom: 50px;
+                
+            }
+
+            .back_buttn {
+                width: 130px;
+                height: 40px;
+                background-color: $blue;
+                color: $white;
+                border: 0;
+                border-radius: 3px;
+                font-size: $fs-18;
+                font-weight: bold;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                cursor: pointer; 
+            }
+        }
+    }
+}
+
+
+#Information {
+    padding-top: 25px;
+
+    @include rwd($phone) {
+        padding: 0;
+    }
+
+    .row {
+        justify-content: space-between;
+        align-items: center;
+
+        .col-12 {
+            
+            @include rwd($pad) {
+                padding: 0 15px;
+            }
+
+            .goods_area {
+                // height: 368px;
+                overflow: hidden;
+                position: relative;
+                @include rwd($phone) {
+                    width: 100%;
+                    // height: ;
+                }
+    
+
+                .goods_img {
+                    width: 100%;
+                    height: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+
+                .goods_label {
+                    position: absolute;
+                    bottom: 37px;
+                    right: 45px;
+                    font-size: 25px;
+                    font-weight: bold;
+                    color: $red;
+                    border: 1px solid $red;
+                    padding: 3px;
+                    @include rwd($phone){
+                        font-size: $fs-18;
+                        bottom: 20px;
+                        right: 25px;
+                    }
+                }
+            }
+        }
+
+        .goods_text {
+            height: 368px;
+            padding: 70px 0;
+
+            @include rwd($pad) {
+                padding: 50px 15px;
+                height: 100%;
+            }
+            @include rwd($phone) {
+                padding: 20px 15px;
+                height: 100%;
+            }
+
+            .text_area {
+                margin-bottom: 11px;
+
+                span:nth-child(1) {
+                    font-size: $fs-24;
+                }
+
+                span:nth-child(2) {
+                    font-size: $fs-24;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        hr {
+            border-top: 0.5px solid rgb(0, 0, 0);
+            margin: 27px 0;
+        }
+
+        .text_conten {
+            font-size: $fs-18;
+            line-height: 28px;
+            letter-spacing: 0.8px;
+        }
+    }
+}
+
+#Merchant {
+    .Mer_area {
+        padding-top: 50px;
+
+        @include rwd($pad) {
+            padding-top: 0px;
+        }
+
+        .row {
+            margin-bottom: 29px;
+
+
+            .Neme_area {
+                display: flex;
+                border: 1.5px solid $orange;
+
+                @include rwd($pad) {
+                    margin-bottom: 10px;
+                }
+                @include rwd($phone){
+                    flex-direction: column;
+                }
+
+
+                .Mer_Name {
+                    width: calc(100% - 50px);
+                    padding: 25px 30px;
+                    display: flex;
+                    flex-direction: column;
+                    letter-spacing: 0.8px;
+                    line-height: 47px;
+                    @include rwd($phone){
+                        width: 100%;
+                    }
+                    h2 {
+                        line-height: 1;
+                        margin-bottom: 15px;
+                        font-size: $fs-24;
+                        font-weight: bold;
+                    }
+
+                    span {
+                        font-size: $fs-18;
+
+                    }
+
+                    span:nth-child(2) {
+                        margin-bottom: 12px;
+                                               
+                    }
+                    span:nth-child(3){              
+                        line-height: 28px;
+                    }
+                }
+
+                a {
+                    border-left: 1.5px solid $orange;
+                    width: 50px;
+                    padding: 24px 0;
+                    display: flex;
+                    text-align: center;
+                    font-size: $fs-18;
+                    font-weight: bold;
+                    color: $orange;
+                    align-items: center;
+                    @include rwd($phone){
+                        width: 100%;
+                        border-left:unset;
+                        border-top:1.5px solid $orange ;
+                        padding: 15px 0;
+                    }
+                    
+                    span {
+                        width: 100%;
+                        line-height: 1.2;
+                        padding: 0 15px;
+                        
+                    }
+                }
+            }
+
+            .Mer_text {
+                padding: 26px 30px;
+                background-color: $orange;
+                color: $white;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+
+                .Mer_top {
+                    font-size: $fs-36;
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: space-between;
+                    padding-bottom: 10px;
+                    @include rwd($phone){
+                        flex-wrap: wrap;
+                        
+                    }
+                    span {
+                        letter-spacing: 1.2px;
+                    }
+                }
+
+                .Mer_hr {
+                    border-bottom: solid 1.5px $white;
+                }
+
+                .Mer_bottom {
+                    display: flex;
+                    justify-content: flex-end;
+                    font-size: $fs-18;
+                    letter-spacing: 0.8px;
+                    padding-top: 10px;
+                    @include rwd($phone){
+                        justify-content: flex-start;
+                    }
+                }
+            }
+
+
+        }
+
+        .special {
+            .Neme_area {
+                border: $red 1.5px solid;
+
+                a {
+                    border-left: $red 1.5px solid;
+                    color: $red;
+                    @include rwd($phone){
+                        width: 100%;
+                        border-left:unset;
+                        border-top:1.5px solid $red ;
+                    }
+                }
+            }
+
+            .Mer_text {
+                background-color: $red;
+            }
+        }
+    }
+}
+
+#Seller {
+    padding-top: 71px;
+
+    .HotSeller {
+        .container {
+
+            position: relative;
+
+            @include rwd($pc) {
+                max-width: 830px;
+            }
+
+            @include rwd($pad) {
+                max-width: 550px;
+            }
+
+            @include rwd($phone) {
+                max-width: 255px;
+            }
+
+            .Hottitle {
+                text-align: center;
+                span {
+                    padding: 0 16px;
+                    font-size: $fs-36;
+                    font-weight: bold;
+                    border-right: solid 2px #000;
+                    border-left: solid 2px #000;
+                    display: inline-block;
+                }
+            }
+
+            .swiPer {
+                padding: 45px 10px 10px;
+                width: calc(100% + 20px);
+                margin-left: -10px;
+                position: unset;
+
+                .card {
+                    width: 100%;
+                    border-radius: 0;
+                    box-shadow: 0px 0px 5px #25252580;
+
+                    .card-img-top {
+                        width: 100%;
+                        height: 180px;
+                        padding: 10px;
+                        position: relative;
+
+                        .overflowH {
+                            width: 100%;
+                            height: 100%;
+                            overflow: hidden;
+                            border-radius: 20px;
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+
+                        .iconbox {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+
+
+                        }
+                    }
+
+                    .card-body {
+                        padding: 10px 20px 20px 10px;
+
+                        .card-title {
+                            text-align: center;
+                            font-size: 22px;
+                            font-weight: bold;
+                            text-align: justify;
+                            text-align-last: center;
+
+                        }
+
+
+
+                    }
+
+                    .btn-primary {
+                        width: 100%;
+                        height: 40px;
+                        background-color: $blue;
+                        border-radius: 0;
+                        font-size: $fs-18;
+                        font-weight: bold;
+                    }
+                }
+
+                .swiper-button-prev {
+                    position: absolute;
+                    left: -10px;
+                    transform: translate(-50%, 50%);
+
+                    &::after {
+                        content: url(../img/swiperLeft.png);
+                    }
+                }
+
+                .swiper-button-next {
+                    position: absolute;
+                    right: -10px;
+                    transform: translate(50%, 50%);
+
+                    &::after {
+                        content: url(../img/swiperRight.png);
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+#BotBanner {
+    width: 100%;
+    height: 490px;
+    z-index: -1;
+    clip-path: circle(3300px at 50% 3300px);
+    position: relative;
+    margin-top: 150px;
+
+    @include rwd($pc) {
+        height: 475px;
+        clip-path: circle(3300px at 50% 3300px);
+    }
+
+    @include rwd($phone) {
+        height: 133px;
+        clip-path: circle(800px at 50% 802px);
+        margin-top: 100px;
+    }
+
+    .Banner {
+        width: 100%;
+        height: 100%;
+        background-color: #CCC;
+        background-image: url("../img/homeBanner.jpg");
+        background-size: cover;
+        background-position: 10%;
+
+    }
+}
+
+footer {
+    margin: 0;
+}

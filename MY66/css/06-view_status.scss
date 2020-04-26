@@ -1,0 +1,111 @@
+@import "./variable";
+#top_line{
+    margin-bottom: 50px !important;
+}
+#btn_group{
+    .container{
+        .nav{
+            margin-bottom: 30px;
+
+            .nav-item{
+                .nav-link{
+                    width: 100px;
+                    height: 35px;
+                    border-radius: 2px;
+                    font-weight: bold;
+                    text-align: center;
+                    line-height: 35px;
+                    padding: 0;
+                    margin-right: 20px;
+                    border: 0.5px solid $border-gray;
+                    color: $black;
+                    &.active{
+                        background-color: $orange;
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        #pills-tabContent{
+            .tab-pane{
+                form{
+                    margin-bottom: 35px;
+                    .info{
+                        box-shadow: 0 0 15px -10px;
+                        padding: 10px;
+                        .photo{
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        .name_area{
+                            padding-top: 20px;
+
+                            .origin{
+                                padding-left: 10px;
+                                p{
+                                    font-size: $fs-18;  
+                                    &:first-child{
+                                        font-size: 22px;
+                                        font-weight: bold;
+                                        padding-bottom: 11px;
+                                    }
+                                }
+                            }
+                            .food_name{
+                                text-align: center;
+                                font-size: $fs-24;
+                                font-weight: bold;
+                                margin-top: 15px;
+                            }
+                        }
+                        .date{
+                            padding: 20px 0 20px 10px;
+                            p{
+                                font-weight: bold;
+                                font-size: $fs-16;
+                                &:first-child{
+                                    margin-bottom: 10px;
+                                }
+                                span{
+                                    font-size: $fs-18;
+                                    font-weight: normal;
+                                }
+                            }
+                        }
+                        .input_area{
+                            padding: 22px 0;
+                            input{
+                                width: 100%;
+                                height: 40px;
+                                border-radius: 2px;
+                                border: 1px solid #808080;
+                                padding-left: 20px;
+                            }
+                        }
+                    }
+                    .btn_group{
+                        a{
+                            display: block;
+                            height: 38px;
+                            width: 100%;
+                            background-color: $blue2;
+                            border: 0;
+                            color: $white;
+                            font-size: $fs-18;
+                            font-weight: bold;
+                            text-align: center;
+                            line-height: 38px;
+                            text-decoration: none;
+
+                            &:hover{
+                                background-color: $hover_blue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

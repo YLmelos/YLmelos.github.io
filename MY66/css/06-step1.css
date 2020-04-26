@@ -1,0 +1,114 @@
+@media (max-width: 767px) {
+  #top_line .title {
+    top: 60% !important;
+  }
+}
+
+#company .mb-50, #contact .mb-50 {
+  margin-bottom: 50px;
+}
+
+#company .title, #contact .title {
+  border-bottom: 1px solid #CBCBCB;
+  padding-bottom: 16px;
+  margin-bottom: 25px;
+}
+
+#company .title h3, #contact .title h3 {
+  font-size: 36px;
+}
+
+#company .text_box, #contact .text_box {
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#company .text_box span, #contact .text_box span {
+  background-color: #0A5999;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px 10px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media (max-width: 767px) {
+  #company .text_box span, #contact .text_box span {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+#company .input_box, #contact .input_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#company .input_box select, #contact .input_box select {
+  width: 100%;
+  height: 50px;
+  border-radius: 3px;
+  border: 1px solid black;
+  font-size: 18px;
+  color: #AFAFAF;
+}
+
+#company .input_box select option, #contact .input_box select option {
+  width: 100%;
+}
+
+#company .input_box input, #contact .input_box input {
+  width: 100%;
+  height: 50px;
+  border-radius: 3px;
+  border: 1px solid black;
+  color: #AFAFAF;
+  padding-left: 10px;
+}
+
+main .edit {
+  width: 250px;
+  height: 70px;
+  background-color: #0A5999;
+  display: block;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 70px;
+  text-align: center;
+  margin: 60px auto 0 auto;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 0;
+}
+
+select {
+  width: 100%;
+  height: 30px;
+  padding-left: 10px;
+  background-image: url("../img/arrow.png");
+  background-position: 98% 50%;
+  background-size: 3.5%;
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+  visibility: initial !important;
+}
+
+@media (max-width: 1200px) {
+  select {
+    max-width: 100%;
+  }
+}
+/*# sourceMappingURL=06-step1.css.map */

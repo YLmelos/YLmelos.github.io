@@ -1,0 +1,412 @@
+@import "./variable";
+#top_line{
+    margin-bottom: 50px !important;
+}
+#company,#contact{
+    @include rwd($phone){
+        padding: 0 15px;
+    }
+    .mb-50{
+        margin-bottom: 50px;
+    }
+    .title{
+        
+        padding-bottom: 22px;
+        display: flex;
+        justify-content: space-between;
+        @include rwd($phone){
+            display: unset;
+        }
+        h3{
+            font-size: $fs-36;
+            @include rwd($phone){
+                text-align: center;
+            }
+        }
+        .check_box_area {
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            top: 8px;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: $fs-18;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    
+        /* Hide the browser's default checkbox */
+        .check_box_area input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+            width: 18px;
+            height: 18px;
+        }
+    
+        /* Create a custom checkbox */
+        .checkmark {
+            position: absolute;
+            top: 0;
+            right: 120px;
+            height: 18px;
+            width: 18px;
+            background-color: white;
+            border: 1px solid #333333;
+            border-radius: 3px;
+        }
+    
+        /* On mouse-over, add a grey background color */
+        .check_box_area:hover input~.checkmark {
+            background-color: #ccc;
+        }
+    
+        /* When the checkbox is checked, add a blue background */
+        .check_box_area input:checked~.checkmark {
+            background-color: black;
+        }
+    
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+    
+        /* Show the checkmark when checked */
+        .check_box_area input:checked~.checkmark:after {
+            display: block;
+        }
+    
+        /* Style the checkmark/indicator */
+        .check_box_area .checkmark:after {
+            left: 6px;
+            top: 3px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+    .text_box{
+        text-align: right;
+        display: flex;
+        justify-content: flex-end;
+        span{
+            background-color: #0A5999;
+            color: $white;
+            font-weight: bold;
+            font-size: $fs-18;
+            padding: 5px 10px;
+            align-self: center;
+            
+        }
+    }
+    .input_box{
+        display: flex;
+        justify-content: center;
+        select{
+            width: 100%;
+            height: 50px;
+            border-radius: 3px;
+            border: 1px solid black;
+            color: $option_gary;
+            option{
+                width: 100%;
+            }
+        }
+        input{
+            width: 100%;
+            height: 50px;
+            border-radius: 3px;
+            border: 1px solid black;
+            color: $option_gary;
+            padding-left: 10px;
+        }
+    }
+
+    .check_box_area {
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 18px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    /* Hide the browser's default checkbox */
+    .check_box_area input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Create a custom checkbox */
+    .checkmark {
+        position: absolute;
+        top: 0;
+        right: 80px;
+        height: 18px;
+        width: 18px;
+        background-color: white;
+        border: 1px solid #333333;
+        border-radius: 3px;
+    }
+
+    /* On mouse-over, add a grey background color */
+    .check_box_area:hover input~.checkmark {
+        background-color: #ccc;
+    }
+
+    /* When the checkbox is checked, add a blue background */
+    .check_box_area input:checked~.checkmark {
+        background-color: black;
+    }
+
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    /* Show the checkmark when checked */
+    .check_box_area input:checked~.checkmark:after {
+        display: block;
+    }
+
+    /* Style the checkmark/indicator */
+    .check_box_area .checkmark:after {
+        left: 6px;
+        top: 3px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+   .card_box{
+    margin-bottom: 50px;
+    .info{
+        box-shadow: 0 0 15px -10px;
+        padding: 10px;
+        .photo{
+            img{
+                width: 100%;
+            }
+        }
+        .name_area{
+            padding-top: 20px;
+
+            @include rwd($phone){
+                padding-top: 30px;
+                padding-bottom: 10px;
+            }
+            .origin{
+                padding-left: 10px;
+                p{
+                    font-size: $fs-18;  
+                    &:first-child{
+                        font-size: 22px;
+                        font-weight: bold;
+                        padding-bottom: 11px;
+                    }
+                }
+            }
+            .food_name{
+                text-align: center;
+                font-size: $fs-24;
+                font-weight: bold;
+                margin-top: 15px;
+            }
+        }
+        .date{
+            padding: 20px 0 20px 10px;
+            p{
+                font-weight: bold;
+                font-size: $fs-16;
+                &:first-child{
+                    margin-bottom: 10px;
+                }
+                span{
+                    font-size: $fs-18;
+                    font-weight: normal;
+                }
+            }
+        }
+        .input_area{
+            padding: 22px 0;
+            input{
+                width: 100%;
+                height: 40px;
+                border-radius: 2px;
+                border: 1px solid #808080;
+                padding-left: 20px;
+            }
+        }
+    }
+    .btn_group{
+        a{
+            display: block;
+            height: 38px;
+            width: 100%;
+            background-color: $blue2;
+            border: 0;
+            color: $white;
+            font-size: $fs-18;
+            font-weight: bold;
+            text-align: center;
+            line-height: 38px;
+            text-decoration: none;
+
+            &:hover{
+                background-color: $hover_blue;
+            }
+        }
+    }
+   }
+
+}
+main{
+    .edit{
+        width: 250px;
+        height: 70px;
+        background-color: #0A5999;
+        display: block;
+        color: $white;
+        font-size: $fs-24;
+        font-weight: bold;
+        line-height: 70px;
+        text-align: center;
+        margin: 60px auto 0 auto;
+        text-decoration: none;
+        border-radius: 3px;
+        border: 0;
+        
+    }
+}
+
+.hr{
+    height: 1px;
+    hr{
+        margin: 0;
+    }
+}
+
+.agree{
+
+    .check_box_area {
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 18px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        
+        margin-top: 18px;
+    }
+
+    /* Hide the browser's default checkbox */
+    .check_box_area input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Create a custom checkbox */
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0px;
+        height: 25px;
+        width: 25px;
+        background-color: white;
+        border: 1px solid #333333;
+        border-radius: 3px;
+    }
+
+    /* On mouse-over, add a grey background color */
+    .check_box_area:hover input~.checkmark {
+        background-color: #ccc;
+    }
+
+    /* When the checkbox is checked, add a blue background */
+    .check_box_area input:checked~.checkmark {
+        background-color: black;
+    }
+
+    /* Create the checkmark/indicator (hidden when not checked) */
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    /* Show the checkmark when checked */
+    .check_box_area input:checked~.checkmark:after {
+        display: block;
+    }
+
+    /* Style the checkmark/indicator */
+    .check_box_area .checkmark:after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+}
+
+
+select{
+    width: 100%;
+    height: 30px;
+    padding-left: 10px;
+    background-image: url('../img/arrow.png');
+    background-position: 98% 50%;
+    background-size: 3.5%;
+    background-repeat: no-repeat;
+    -webkit-appearance: none; 
+    visibility: initial!important;
+
+    @media (max-width:1200px) {
+        max-width: 100%;
+    }
+}
+
+#check_box_area_row{
+    padding-top: 50px;
+}
