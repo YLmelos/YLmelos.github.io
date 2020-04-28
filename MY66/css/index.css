@@ -51,8 +51,8 @@
   background-color: #FFF;
   margin: 0;
   border-radius: 0px 0px 15px 15px;
-  -webkit-box-shadow: 0px 0px 5px #25252580;
-          box-shadow: 0px 0px 5px #25252580;
+  -webkit-box-shadow: 0px 0px 5px #85727280;
+          box-shadow: 0px 0px 5px #85727280;
 }
 
 #HomeNavbar .container .row .logo_area {
@@ -78,6 +78,7 @@
 
 #HomeNavbar .menu_area {
   padding-right: 65px;
+  padding-top: 5px;
 }
 
 @media (max-width: 991px) {
@@ -155,6 +156,56 @@
   font-size: 15px;
 }
 
+#HomeNavbar .menu_area ul .dropdown .dropdown-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#HomeNavbar .menu_area ul .dropdown .dropdown-toggle span {
+  border: 2px solid #C72E27;
+  text-align: center;
+  padding: 3px 0;
+  color: #C72E27;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: block;
+}
+
+#HomeNavbar .menu_area ul .dropdown .dropdown-toggle::after {
+  -webkit-transform: translateX(16px);
+          transform: translateX(16px);
+}
+
+#HomeNavbar .menu_area ul .dropdown .dropdown-menu {
+  position: absolute;
+  -webkit-transform: translate3d(-107px, 40px, 0px) !important;
+          transform: translate3d(-107px, 40px, 0px) !important;
+  padding-top: 30px;
+  padding-bottom: 16px;
+  top: 0px;
+  left: 0px;
+  will-change: transform;
+  z-index: -1;
+  background-color: #C72E27;
+  width: 250px;
+}
+
+#HomeNavbar .menu_area ul .dropdown .dropdown-menu a {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+}
+
+#HomeNavbar .menu_area ul .dropdown .dropdown-menu a:hover {
+  background-color: unset;
+}
+
 #HomeNavbar .menu_area ul .logo_in_btn {
   width: 60px;
   height: 30px;
@@ -170,10 +221,11 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  color: #ffffff;
 }
 
-#HomeNavbar .menu_area ul .logo_in_btn a {
-  color: #ffffff;
+#HomeNavbar .menu_area ul .logo_in_btn:hover {
+  background-color: #E57A77;
 }
 
 @media (max-width: 767px) {
@@ -186,8 +238,8 @@ main #header {
   width: 100%;
   height: 760px;
   z-index: -1;
-  -webkit-clip-path: circle(2824px at 50% -2065px);
-          clip-path: circle(2824px at 50% -2065px);
+  -webkit-clip-path: circle(2750px at 50% -1948px);
+          clip-path: circle(2750px at 50% -1948px);
 }
 
 @media (max-width: 1200px) {
@@ -223,6 +275,13 @@ main #header .swiperbanner .bannernext {
   right: 30px;
 }
 
+@media (max-width: 767px) {
+  main #header .swiperbanner .bannernext::after {
+    -webkit-transform: scale(0.625);
+            transform: scale(0.625);
+  }
+}
+
 main #header .swiperbanner .bannernext::after {
   content: url(../img/BannerRight.png);
 }
@@ -231,13 +290,20 @@ main #header .swiperbanner .bannerprev {
   left: 30px;
 }
 
+@media (max-width: 767px) {
+  main #header .swiperbanner .bannerprev::after {
+    -webkit-transform: scale(0.625);
+            transform: scale(0.625);
+  }
+}
+
 main #header .swiperbanner .bannerprev::after {
   content: url(../img/BannerLeft.png);
 }
 
 main #btnCase {
   position: relative;
-  margin-top: -260px;
+  margin-top: -231px;
   width: 100%;
 }
 
@@ -260,7 +326,7 @@ main #btnCase .SignBtn {
 }
 
 main #btnCase .SignBtn .container {
-  padding-left: 85px;
+  padding-left: 103px;
   font-size: 0;
 }
 
@@ -288,6 +354,10 @@ main #btnCase .SignBtn .container {
   }
 }
 
+main #btnCase .SignBtn .container a:hover .btn span {
+  font-size: 26px;
+}
+
 @media (max-width: 767px) {
   main #btnCase .SignBtn .container a {
     width: calc(100% - 10px);
@@ -299,6 +369,7 @@ main #btnCase .SignBtn .container a .btn {
   width: 180px;
   height: 65px;
   border: 0;
+  border-radius: 7px;
 }
 
 @media (max-width: 767px) {
@@ -322,6 +393,7 @@ main #btnCase .SignBtn .container a .btn span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  letter-spacing: 0.1em;
 }
 
 main #btnCase .SignBtn .container a .btn span::before {
@@ -338,7 +410,7 @@ main #btnCase .SignBtn .container a:nth-child(1) .btn span::before {
 }
 
 main #btnCase .SignBtn .container a:nth-child(2) {
-  margin-left: 5px;
+  margin-left: 19px;
 }
 
 main #btnCase .SignBtn .container a:nth-child(2) .btn span::before {
@@ -350,14 +422,8 @@ main #btnCase .GoodsBtn {
 }
 
 main #btnCase .GoodsBtn .container {
-  padding: 0 65px;
+  padding: 0 80px;
   width: 100%;
-}
-
-@media (max-width: 1200px) {
-  main #btnCase .GoodsBtn .container {
-    padding: 0 80px;
-  }
 }
 
 @media (max-width: 991px) {
@@ -379,7 +445,7 @@ main #btnCase .GoodsBtn .container .row {
   height: 250px;
   background-color: #fff;
   padding: 20px;
-  border-radius: 15px;
+  border-radius: 10px;
   -webkit-box-shadow: 0px 0px 5px #25252580;
           box-shadow: 0px 0px 5px #25252580;
   margin: 0;
@@ -388,6 +454,7 @@ main #btnCase .GoodsBtn .container .row {
 @media (max-width: 767px) {
   main #btnCase .GoodsBtn .container .row {
     height: 290px;
+    padding: 10px;
   }
 }
 
@@ -405,20 +472,24 @@ main #btnCase .GoodsBtn .container .row a {
           align-items: center;
 }
 
-main #btnCase .GoodsBtn .container .row a::before {
-  margin-right: 15px;
+main #btnCase .GoodsBtn .container .row a:hover {
+  text-decoration: none;
 }
 
-@media (max-width: 767px) {
-  main #btnCase .GoodsBtn .container .row a::before {
-    margin-right: 35px;
-  }
+main #btnCase .GoodsBtn .container .row a:hover span {
+  text-decoration: none;
+  font-size: 40px;
+}
+
+main #btnCase .GoodsBtn .container .row a::before {
+  margin-right: 34px;
 }
 
 main #btnCase .GoodsBtn .container .row a span {
   font-size: 36px;
   font-weight: bold;
   color: #fff;
+  letter-spacing: 0.1em;
 }
 
 main #btnCase .GoodsBtn .container .row a:nth-child(1) {
@@ -467,15 +538,15 @@ main #btnCase .GoodsBtn .container .row a:nth-child(3) .cover {
 }
 
 main #btnCase .GoodsBtn .container .row a:nth-child(3) .cover span {
-  border: 2px solid;
+  border: 1px solid;
   border-radius: 8px;
-  padding: 9px 18px;
+  padding: 8px 16px;
   font-size: 24px;
   font-weight: normal;
 }
 
 main #content {
-  padding-top: 78px;
+  padding-top: 80px;
 }
 
 @media (max-width: 767px) {
@@ -484,34 +555,34 @@ main #content {
   }
 }
 
-main #content .HotSeller .container {
+main #content .container {
   position: relative;
 }
 
 @media (max-width: 1200px) {
-  main #content .HotSeller .container {
+  main #content .container {
     max-width: 830px;
   }
 }
 
 @media (max-width: 991px) {
-  main #content .HotSeller .container {
+  main #content .container {
     max-width: 550px;
   }
 }
 
 @media (max-width: 767px) {
-  main #content .HotSeller .container {
+  main #content .container {
     max-width: 255px;
   }
 }
 
-main #content .HotSeller .container .Hottitle {
+main #content .container .Hottitle {
   text-align: center;
 }
 
-main #content .HotSeller .container .Hottitle span {
-  padding: 0 20px;
+main #content .container .Hottitle span {
+  padding: 0 15px;
   font-size: 36px;
   font-weight: bold;
   border-right: solid 2px #000;
@@ -519,38 +590,44 @@ main #content .HotSeller .container .Hottitle span {
   display: inline-block;
 }
 
-main #content .HotSeller .container .swiPer {
+main #content .container .swiPer {
   padding: 45px 10px 10px;
   width: calc(100% + 20px);
   margin-left: -10px;
   position: unset;
 }
 
-main #content .HotSeller .container .swiPer .card {
+@media (max-width: 767px) {
+  main #content .container .swiPer {
+    padding-top: 27px;
+  }
+}
+
+main #content .container .swiPer .card {
   width: 100%;
   border-radius: 0;
   -webkit-box-shadow: 0px 0px 3px rgba(37, 37, 37, 0.35);
           box-shadow: 0px 0px 3px rgba(37, 37, 37, 0.35);
 }
 
-main #content .HotSeller .container .swiPer .card .card-img-top {
+main #content .container .swiPer .card .card-img-top {
   width: 100%;
   height: 180px;
   padding: 10px;
   position: relative;
 }
 
-main #content .HotSeller .container .swiPer .card .card-img-top .overflowH {
+main #content .container .swiPer .card .card-img-top .overflowH {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
-main #content .HotSeller .container .swiPer .card .card-img-top .overflowH img {
+main #content .container .swiPer .card .card-img-top .overflowH img {
   width: 100%;
 }
 
-main #content .HotSeller .container .swiPer .card .card-img-top .iconbox {
+main #content .container .swiPer .card .card-img-top .iconbox {
   position: absolute;
   top: 0;
   left: 0;
@@ -567,7 +644,7 @@ main #content .HotSeller .container .swiPer .card .card-img-top .iconbox {
           align-items: center;
 }
 
-main #content .HotSeller .container .swiPer .card .card-img-top .iconbox .Circle {
+main #content .container .swiPer .card .card-img-top .iconbox .Circle {
   width: 85px;
   height: 85px;
   background-color: rgba(0, 0, 0, 0.7);
@@ -587,32 +664,32 @@ main #content .HotSeller .container .swiPer .card .card-img-top .iconbox .Circle
           flex-direction: column;
 }
 
-main #content .HotSeller .container .swiPer .card .card-img-top .iconbox .Circle .icon {
+main #content .container .swiPer .card .card-img-top .iconbox .Circle .icon {
   background-image: url(../img/meet-white-08.png);
   width: 29px;
   height: 25px;
 }
 
-main #content .HotSeller .container .swiPer .card .card-img-top .iconbox .Circle span {
+main #content .container .swiPer .card .card-img-top .iconbox .Circle span {
   margin-top: 8px;
   font-size: 18px;
   color: #ffffff;
 }
 
-main #content .HotSeller .container .swiPer .card .card-body {
+main #content .container .swiPer .card .card-body {
   padding: 10px 10px 0px 10px;
 }
 
-main #content .HotSeller .container .swiPer .card .card-body .card-title {
+main #content .container .swiPer .card .card-body .card-title {
   text-align: center;
   font-size: 22px;
   font-weight: bold;
   text-align: justify;
   text-align-last: center;
-  letter-spacing: 2.5;
+  letter-spacing: 0.025em;
 }
 
-main #content .HotSeller .container .swiPer .card .card-body .card-text {
+main #content .container .swiPer .card .card-body .card-text {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -625,7 +702,7 @@ main #content .HotSeller .container .swiPer .card .card-body .card-text {
   line-height: 1.3;
 }
 
-main #content .HotSeller .container .swiPer .card .btn-primary {
+main #content .container .swiPer .card .btn-primary {
   width: 100%;
   height: 40px;
   background-color: #0A599C;
@@ -635,7 +712,11 @@ main #content .HotSeller .container .swiPer .card .btn-primary {
   border-color: rgba(0, 0, 0, 0);
 }
 
-main #content .HotSeller .container .swiPer .swiper-button-prev {
+main #content .container .swiPer .card .btn-primary:hover {
+  background-color: #1D85BA;
+}
+
+main #content .container .swiPer .swiper-button-prev {
   position: absolute;
   left: -20px;
   -webkit-transform: translate(-50%, 50%);
@@ -643,16 +724,20 @@ main #content .HotSeller .container .swiPer .swiper-button-prev {
 }
 
 @media (max-width: 767px) {
-  main #content .HotSeller .container .swiPer .swiper-button-prev {
-    left: -10px;
+  main #content .container .swiPer .swiper-button-prev {
+    left: -8px;
+  }
+  main #content .container .swiPer .swiper-button-prev::after {
+    -webkit-transform: scale(0.625);
+            transform: scale(0.625);
   }
 }
 
-main #content .HotSeller .container .swiPer .swiper-button-prev::after {
+main #content .container .swiPer .swiper-button-prev::after {
   content: url(../img/swiperLeft.png);
 }
 
-main #content .HotSeller .container .swiPer .swiper-button-next {
+main #content .container .swiPer .swiper-button-next {
   position: absolute;
   right: -20px;
   -webkit-transform: translate(50%, 50%);
@@ -660,93 +745,31 @@ main #content .HotSeller .container .swiPer .swiper-button-next {
 }
 
 @media (max-width: 767px) {
-  main #content .HotSeller .container .swiPer .swiper-button-next {
-    right: -10px;
+  main #content .container .swiPer .swiper-button-next {
+    right: -8px;
+  }
+  main #content .container .swiPer .swiper-button-next::after {
+    -webkit-transform: scale(0.625);
+            transform: scale(0.625);
   }
 }
 
-main #content .HotSeller .container .swiPer .swiper-button-next::after {
+main #content .container .swiPer .swiper-button-next::after {
   content: url(../img/swiperRight.png);
 }
 
 main #content .Hotcommodity {
-  padding-top: 90px;
+  padding-top: 100px;
 }
 
 @media (max-width: 767px) {
   main #content .Hotcommodity {
-    padding-top: 45px;
+    padding-top: 40px;
   }
 }
 
-main #content .Hotcommodity .container {
-  position: relative;
-}
-
-@media (max-width: 1200px) {
-  main #content .Hotcommodity .container {
-    max-width: 830px;
-  }
-}
-
-@media (max-width: 991px) {
-  main #content .Hotcommodity .container {
-    max-width: 550px;
-  }
-}
-
-@media (max-width: 767px) {
-  main #content .Hotcommodity .container {
-    max-width: 255px;
-  }
-}
-
-main #content .Hotcommodity .container .Hottitle {
-  text-align: center;
-}
-
-main #content .Hotcommodity .container .Hottitle span {
-  padding: 0 20px;
-  font-size: 36px;
-  font-weight: bold;
-  border-right: solid 2px #000;
-  border-left: solid 2px #000;
-  display: inline-block;
-}
-
-main #content .Hotcommodity .container .swiPer {
-  padding: 45px 10px 10px;
-  width: calc(100% + 20px);
-  margin-left: -10px;
-  position: unset;
-}
-
-main #content .Hotcommodity .container .swiPer .card {
-  width: 100%;
-  border-radius: 0;
-  -webkit-box-shadow: 0px 0px 5px #25252580;
-          box-shadow: 0px 0px 5px #25252580;
-}
-
-main #content .Hotcommodity .container .swiPer .card .card-img-top {
-  width: 100%;
-  height: 180px;
-  padding: 10px;
-  position: relative;
-}
-
-main #content .Hotcommodity .container .swiPer .card .card-img-top .overflowH {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-main #content .Hotcommodity .container .swiPer .card .card-img-top .overflowH img {
-  width: 100%;
-}
-
-main #content .Hotcommodity .container .swiPer .card .card-body {
-  padding: 10px 10px 0px 10px;
+main #content .Hotcommodity .card-body {
+  padding: 20px 10px 30px 10px !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -756,82 +779,19 @@ main #content .Hotcommodity .container .swiPer .card .card-body {
           flex-direction: column-reverse;
 }
 
-main #content .Hotcommodity .container .swiPer .card .card-body .card-title {
-  font-size: 24px;
-  font-weight: bold;
-  letter-spacing: 2.5;
-  text-align: center;
-  margin-bottom: 20px;
+main #content .Hotcommodity .card-body .card-title {
+  margin-bottom: 0;
 }
 
-main #content .Hotcommodity .container .swiPer .card .card-body .card-text {
-  text-align: center;
-  font-size: sf-18;
-  text-align: justify;
+main #content .Hotcommodity .card-body .card-text {
   text-align-last: center;
-  letter-spacing: 2.5;
-  padding-bottom: 10px;
-  line-height: 1.3;
+  margin-bottom: 15px !important;
 }
 
-main #content .Hotcommodity .container .swiPer .card .card-body .card-text span:nth-child(2) {
+main #content .Hotcommodity .card-body .card-text span:nth-child(2) {
   border-left: solid 1px #000;
   padding-left: 10px;
   margin-left: 10px;
   display: inline-block;
-}
-
-main #content .Hotcommodity .container .swiPer .card .btn-primary {
-  width: 100%;
-  height: 40px;
-  background-color: #0A599C;
-  border-radius: 0;
-  font-size: 18px;
-  font-weight: bold;
-  border-color: rgba(0, 0, 0, 0);
-}
-
-main #content .Hotcommodity .container .swiPer .swiper-button-prev {
-  position: absolute;
-  left: -20px;
-  -webkit-transform: translate(-50%, 50%);
-          transform: translate(-50%, 50%);
-}
-
-@media (max-width: 767px) {
-  main #content .Hotcommodity .container .swiPer .swiper-button-prev {
-    left: -10px;
-  }
-}
-
-main #content .Hotcommodity .container .swiPer .swiper-button-prev::after {
-  content: url(../img/swiperLeft.png);
-}
-
-main #content .Hotcommodity .container .swiPer .swiper-button-next {
-  position: absolute;
-  right: -20px;
-  -webkit-transform: translate(50%, 50%);
-          transform: translate(50%, 50%);
-}
-
-@media (max-width: 767px) {
-  main #content .Hotcommodity .container .swiPer .swiper-button-next {
-    right: -10px;
-  }
-}
-
-main #content .Hotcommodity .container .swiPer .swiper-button-next::after {
-  content: url(../img/swiperRight.png);
-}
-
-footer {
-  margin-top: 360px;
-}
-
-@media (max-width: 767px) {
-  footer {
-    margin-top: 100px;
-  }
 }
 /*# sourceMappingURL=index.css.map */

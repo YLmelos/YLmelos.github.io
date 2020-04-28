@@ -83,9 +83,11 @@
                                 </a>
                             </div>
                         </li>
-                        <li class="logo_in_btn">
+                        <li>
                             <a href="./04-Sign_in.html">
-                                登入
+                                <div class="logo_in_btn">
+                                    登入
+                                </div>
                             </a>
                         </li>
                     </ul>
@@ -352,17 +354,17 @@
         <div class="info">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-2 logo">
-                        <a href="#">My66</a>
+                    <div class="col-lg-2 logo">
+                        <a href="./index.html">My66</a>
                     </div>
-                    <div class="col-xl-4 connection">
+                    <div class="col-lg-5 connection">
                         <ul>
                             <li>電話：04-0000-0000</li>
                             <li>傳真：04-0000-0000</li>
                             <li>地址：台中市潭子區OO里OO路OO號</li>
                         </ul>
                     </div>
-                    <div class="col-xl-4 offset-1 copy_right_area">
+                    <div class="col-lg-5  copy_right_area">
                         <ul>
                             <li>累計人次：76576653</li>
                             <li class="copy_right">&copy2020 My66 . All rights reserved.</li>
@@ -450,25 +452,32 @@
             breakpoints: {
 
                 // when window width is >= 320px
-                768: {
+                767: {
                     slidesPerView: 2,
                     spaceBetween: 20,
 
                 },
                 // when window width is >= 480px
-                1000: {
+                991: {
                     slidesPerView: 3,
                     spaceBetween: 30,
                 },
                 // when window width is >= 640px
-                1200: {
+                1201: {
                     slidesPerView: 4,
                     spaceBetween: 40,
                 }
-            }
+            },
+            updateOnWindowResize: true,
+            init: true,
+            longSwipesMs: 1000,
         });
 
         var swiper = new Swiper('.swiper2', {
+
+
+            updateOnWindowResize: true,
+            init: true,
             slidesPerView: 1,
             spaceBetween: 30,
             slidesPerGroup: 1,
@@ -485,27 +494,27 @@
             },
             breakpoints: {
                 // when window width is >= 320px
-                768: {
+                767: {
                     slidesPerView: 2,
                     spaceBetween: 20
                 },
                 // when window width is >= 480px
-                1000: {
+                991: {
                     slidesPerView: 3,
                     spaceBetween: 30
                 },
                 // when window width is >= 640px
-                1200: {
+                1199: {
                     slidesPerView: 4,
                     spaceBetween: 40,
 
                 }
-            }
+            },
         });
 
-        $(window).resize(function () {
-            location.reload(true)
-        })
+        swiper.on('resize', function () {
+            swiper.virtual.update();
+        });
         // $(window).resize(function () {
         //     myswiper.update()
         //     var ww = $(window).width()
@@ -524,7 +533,9 @@
         //     if (ww <= 768) swiper.params.slidesPerView = 1,swiper.params.slidesPerGroup= 1;
         // })
 
-
+        function scroll() {
+            newScroll = new iScroll('wrapper', { hScrollbar: false, vScrollbar: false });
+        }
 
 
 

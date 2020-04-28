@@ -15,16 +15,16 @@
     <!-- layout -->
     <link rel="stylesheet" href="./css/main.css">
     <!-- page css  -->
-    <link rel="stylesheet" href="./css/12-changepassword.css">
-
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 </head>
 
 <body>
     <!-- 錨點 -->
     <div id="anchor"></div>
     <!-- 錨點結束 -->
-    
-    <nav id="navbar">
+    <!-- 一般版NAV內容起點 -->
+    <nav id="navbar" style="display: block;">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-1 logo_area">
@@ -51,18 +51,66 @@
                                 </a>
                             </div>
                         </li>
-                        <li class="logo_in_btn">
-                            <a href="./04-Sign_in.html">
-                                登入
-                            </a>
+                        <li class="nav-item dropdown nomnav-link">
+                            <a class="nav-link dropdown-toggle n" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false">
+                                <span>D</span></a>
+                            <div class="dropdown-menu nomnav-neub">
+                                <a class="dropdown-item nomnav-item" href="./08- member Buyer.html">會員資訊</a>
+                                <a class="dropdown-item nomnav-item" href="./06-new_demand.html">刊登需求單</a>
+                                <a class="dropdown-item nomnav-item" href="./12-change_password.html">修改密碼</a>
+                                <a class="dropdown-item nomnav-item" href="#">會員登出</a>
+                            </div>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
-      <!-- 手機板nav內容起點 -->
-      <section id="nav_md_content" class="d-md-none d-block">
+     <!-- 一般版NAV內容終點 -->
+    <!-- 首頁版NAV內容起點 -->
+    <section id="HomeNavbar" style="display: none;">
+        <div class="container">
+            <div class="row">
+                <div class="col-2 logo_area">
+                    <a href="index.html">
+                        <span>My66</span>
+                    </a>
+                </div>
+                <div class="col-10 menu_area">
+                    <ul>
+                        <li>
+                            <a href="./10-qa.html">常見問題</a>
+                        </li>
+                        <li><a href="./11-contact_us.html">聯絡我們</a></li>
+                        <li class="relative">
+                            <input class="" type="text" placeholder="輸入關鍵字">
+                            <div class="icon_position">
+                                <a href="#">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false">
+                                <span>D</span></a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./08- member Buyer.html">會員資訊</a>
+                                <a class="dropdown-item" href="./06-new_demand.html">刊登需求單</a>
+                                <a class="dropdown-item" href="./12-change_password.html">修改密碼</a>
+                                <a class="dropdown-item" href="#">會員登出</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 首頁版NAV內容終點 -->
+
+    <!-- 手機板nav內容起點 -->
+    <section id="nav_md_content" class="d-md-none d-block">
         <div class="input_area">
             <input type="text" class="col" placeholder="輸入關鍵字">
             <div class="icon_position">
@@ -81,8 +129,14 @@
                 </li>
             </ul>
         </div>
-        <div class="btn_area">
-            <a href="./04-Sign_in.html" class="logo_in_btn">登入</a>
+        <div class="navhr"></div>
+        <div class="list bootom_area">
+            <ul>
+                <li><a href="./08- member Buyer.html">會員資訊</a></li>
+                <li><a href="./06-new_demand.html">刊登需求單</a></li>
+                <li><a href="./12-change_password.html">修改密碼</a></li>
+                <li><a href="#">會員登出</a></li>
+            </ul>
         </div>
         <div class="background"></div>
     </section>
@@ -92,82 +146,14 @@
 
     <!-- 內頁起點 -->
     <main>
-        <section id="top_line">
-            <div class="mask"></div>
-            <div class="container">
-                <!-- 麵包屑起點 -->
-                <div aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><i class="fas fa-home mr-3"></i><a href="#">首頁</a></li>
-                        <li class="breadcrumb-item"><a href="#">修改密碼</a></li>
-                    </ol>
-                </div>
-                <!-- 麵包屑終點 -->
-            </div>
-            <h2 class="title">修改密碼</h2>
-        </section>
-        <section id="form-area">
-            <div class="container">
-                <form>
-                    <div class="from-block">
-                        <input type="password"placeholder="請輸入您的密碼" required>
-                    </div>
-                    <div class="from-block">
-                        <input type="password"placeholder="新密碼" required>
-                    </div>
-                    <div class="from-block">
-                        <input type="password"placeholder="確認新密碼" required>
-                    </div>
-                </form>
-                <a href="#" class="change_btn">變更密碼</a>
-                <a href="#" class="forget_btn">忘記密碼</a>
-            </div>
-        </section>
+
     </main>
     <!-- 內頁終點 -->
 
 
     <!-- gototop按鈕開始 -->
 
-    <a id="goTop" href="#">
-        <div class="icon_box">
-            <i class="fas fa-chevron-up"></i>
-        </div>
-        <p>TOP</p>
-    </a>
-    <!-- gototop按鈕結束 -->
 
-    <footer>
-        <div class="photo_box">
-            <img width="100%" src="./img/bg4-08.png" alt="">
-        </div>
-        <div class="info">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-2 logo">
-                        <a href="./index.html">My66</a>
-                    </div>
-                    <div class="col-lg-5 connection">
-                        <ul>
-                            <li>電話：04-0000-0000</li>
-                            <li>傳真：04-0000-0000</li>
-                            <li>地址：台中市潭子區OO里OO路OO號</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-5  copy_right_area">
-                        <ul>
-                            <li>累計人次：76576653</li>
-                            <li class="copy_right">&copy2020 My66 . All rights reserved.</li>
-                            <li>
-                                <a href="#">政府網站資料開方宣告</a>
-                                <a href="#">隱私權及安全政策</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -178,7 +164,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <!-- page js -->
     <script src=""></script>
 
@@ -210,7 +196,6 @@
 
         })
     </script>
-
 </body>
 
 </html>

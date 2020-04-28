@@ -3,6 +3,25 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (max-width: 991px) {
+  html {
+    /* Optional: show position indicator in red */
+  }
+  html html {
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  html ::-webkit-scrollbar {
+    width: 0px;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
+  }
+  html ::-webkit-scrollbar-thumb {
+    background: #FF0000;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -70,7 +89,7 @@ a {
 
 @media (max-width: 767px) {
   #goTop .icon_box {
-    margin-top: -5px;
+    margin-top: -3px;
   }
 }
 
@@ -92,6 +111,7 @@ a {
 @media (max-width: 767px) {
   #goTop p {
     font-size: 12px;
+    padding-top: 4px;
   }
 }
 
@@ -272,6 +292,56 @@ a {
   color: #C72E27;
 }
 
+#navbar .container .row ul .nomnav-link .dropdown-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#navbar .container .row ul .nomnav-link .dropdown-toggle span {
+  border: 2px solid #ffffff;
+  text-align: center;
+  padding: 3px 0;
+  color: #ffffff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: block;
+}
+
+#navbar .container .row ul .nomnav-link .dropdown-toggle::after {
+  -webkit-transform: translateX(16px);
+          transform: translateX(16px);
+}
+
+#navbar .container .row ul .nomnav-link .dropdown-menu {
+  position: absolute;
+  -webkit-transform: translate3d(-107px, 40px, 0px) !important;
+          transform: translate3d(-107px, 40px, 0px) !important;
+  padding-top: 30px;
+  padding-bottom: 16px;
+  top: 0px;
+  left: 0px;
+  will-change: transform;
+  z-index: -1;
+  background-color: #C72E27;
+  width: 250px;
+}
+
+#navbar .container .row ul .nomnav-link .dropdown-menu a {
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+}
+
+#navbar .container .row ul .nomnav-link .dropdown-menu a:hover {
+  background-color: unset;
+}
+
 #nav_md_content {
   position: fixed;
   z-index: 100;
@@ -293,7 +363,7 @@ a {
   height: 30px;
   text-align: center;
   position: relative;
-  margin: 65px 0;
+  margin: 50px 0 25px 0;
 }
 
 #nav_md_content .input_area input {
@@ -324,11 +394,13 @@ a {
 
 #nav_md_content .input_area .icon_position {
   position: absolute;
-  top: 40%;
-  left: 71.5%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  height: 100%;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 30px;
+  width: 220px;
+  pointer-events: none;
 }
 
 #nav_md_content .input_area .icon_position i {
@@ -350,7 +422,7 @@ a {
 }
 
 #nav_md_content .list ul li {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 #nav_md_content .list ul li:last-child {
@@ -367,6 +439,16 @@ a {
   border-bottom: 2px solid #ffffff;
 }
 
+#nav_md_content .navhr {
+  border-bottom: 2px #fff solid;
+  margin: 25px auto;
+  width: 220px;
+}
+
+#nav_md_content .bootom_area {
+  padding-bottom: 50px;
+}
+
 #nav_md_content .btn_area {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -374,7 +456,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 65px 0;
+  padding: 25px 0 50px 0;
 }
 
 #nav_md_content .btn_area .logo_in_btn {
@@ -396,7 +478,7 @@ a {
   height: 100%;
   background-image: url(../img/bg5.png);
   background-size: 160%;
-  background-position: top,center;
+  background-position: top, center;
 }
 
 main {
@@ -478,30 +560,43 @@ footer {
   margin-top: 285px;
 }
 
+@media (max-width: 1200px) {
+  footer {
+    margin-top: 235px;
+  }
+}
+
+@media (max-width: 991px) {
+  footer {
+    margin-top: 220px;
+  }
+}
+
 @media (max-width: 767px) {
   footer {
-    margin-top: 100px;
+    margin-top: 115px;
   }
 }
 
 footer .photo_box {
-  -webkit-transform: translate(0, 50%);
-          transform: translate(0, 50%);
+  -webkit-transform: translate(0, -60%);
+          transform: translate(0, -60%);
   position: absolute;
-  bottom: 110%;
   z-index: -1;
-}
-
-@media (max-width: 1199px) {
-  footer .photo_box {
-    bottom: 102%;
-  }
+  width: 100%;
 }
 
 footer .info {
   width: 100%;
   background-color: #C72E27;
   padding: 37px 0 45px 0;
+  height: 150px;
+}
+
+@media (max-width: 1200px) {
+  footer .info {
+    height: unset;
+  }
 }
 
 @media (max-width: 991px) {
