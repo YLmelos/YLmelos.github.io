@@ -3,23 +3,8 @@ html {
   scroll-behavior: smooth;
 }
 
-@media (max-width: 991px) {
-  html {
-    /* Optional: show position indicator in red */
-  }
-  html html {
-    overflow: scroll;
-    overflow-x: hidden;
-  }
-  html ::-webkit-scrollbar {
-    width: 0px;
-    /* Remove scrollbar space */
-    background: transparent;
-    /* Optional: just make scrollbar invisible */
-  }
-  html ::-webkit-scrollbar-thumb {
-    background: #FF0000;
-  }
+::-webkit-scrollbar {
+  display: none;
 }
 
 h1,
@@ -525,7 +510,7 @@ main #top_line .breadcrumb {
 main #top_line .breadcrumb .breadcrumb-item,
 main #top_line .breadcrumb .breadcrumb-item a {
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 900;
 }
 
@@ -639,7 +624,7 @@ footer .info .connection ul {
 }
 
 footer .info .connection ul li {
-  margin-bottom: 8px;
+  line-height: 25px;
 }
 
 footer .info .connection ul li:last-child {

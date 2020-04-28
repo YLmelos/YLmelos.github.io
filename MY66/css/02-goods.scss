@@ -16,13 +16,16 @@ main{
         background-color: transparent;
         padding: 0;
         margin: 0;
-
+        .fa-home.mr-3{
+            font-size: 14px;
+            margin-right: 5px !important;
+        }
         .breadcrumb-item {
-
+            padding-left: 7px;
             &,
             a {
                 color: white;
-                font-size: 18px;
+                font-size: $fs-16;
                 font-weight: 900;
             }
 
@@ -33,27 +36,32 @@ main{
             &:first-child {
                 &::before {
                     content: "";
+                    padding-right: 7px;
                 }
             }
 
             &::before {
                 content: ">";
+                padding-right: 7px;
             }
         }
     }
 
     .title {
-        color: $white;
-        font-size: $fs-36;
-        font-weight: bold;
+        color: $white;       
         padding-top: 50px;
         position: relative;
         display: flex;
         align-items: center;
+        h2{
+            font-size: $fs-36;
+            font-weight: bold;
+        }
 
         img {
             width: 45px;
             margin-right: 20px;
+            height: 36px;
         }
     }
 
@@ -67,6 +75,8 @@ main{
 
         .img_1 {
             background-image: url(../img/goods-A.jpg);
+            width: 100%;
+            height: 100%;
         }
 
         .img_2 {
@@ -89,14 +99,6 @@ main{
             font-weight: bold;
             color: $white;
             padding: 0;
-
-            .cover {
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                background-color: $cover;
-
-            }
 
             .Mask {
                 background-color: rgba(66, 33, 11, 0.3);

@@ -367,7 +367,9 @@ main {
 
                 a:nth-child(2) {
                     margin-left: 19px;
-
+                    @include rwd($phone){
+                        margin-left: 10px;
+                    }
                     .btn {
 
 

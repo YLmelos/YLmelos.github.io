@@ -413,6 +413,12 @@ main #btnCase .SignBtn .container a:nth-child(2) {
   margin-left: 19px;
 }
 
+@media (max-width: 767px) {
+  main #btnCase .SignBtn .container a:nth-child(2) {
+    margin-left: 10px;
+  }
+}
+
 main #btnCase .SignBtn .container a:nth-child(2) .btn span::before {
   content: url("../img/BuyerIcon.png");
 }
