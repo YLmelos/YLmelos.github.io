@@ -3,6 +3,7 @@ var imagesLoaded = 0; // 用於計算已加載的圖片數量
 var imagesPerLoad = 3; // 每次加載的圖片數量
 var count = 0;
 function fetchImages(folderPath, className) {
+    
     fetch(folderPath) // 發送對資料夾的請求
         .then(response => response.text()) // 解析回應為文字
         .then(data => {
@@ -11,11 +12,13 @@ function fetchImages(folderPath, className) {
             let links = htmlDoc.querySelectorAll("a"); // 選擇所有的 <a> 元素
             count = 0;
             links.forEach(link => {
+               
                 let focus = link.getAttribute("title");// 獲取連結的 title 屬性
                 if (focus && focus.includes("-Focus")) {
                     return; // 跳過這次迭代，繼續處理下一個圖片
                 }
                 let href = link.getAttribute("href"); // 獲取連結的 href 屬性
+
                 if (href.match(/\.(jpe?g|png|gif)$/)) { // 如果是圖片連結
                     count++;
                     if (count > imagesLoaded && count <= imagesLoaded + imagesPerLoad) { // 只加載指定數量的圖片
@@ -36,8 +39,8 @@ function fetchImages(folderPath, className) {
 
 // 使用函數來分別處理不同的資料夾
 function FetchImages() {
-    fetchImages("../image/draw", "Draw");
-    fetchImages("../image/design", "Design");
+    fetchImages("./image/draw", "Draw");
+    fetchImages("./image/design", "Design");
 }
 
 FetchImages();
