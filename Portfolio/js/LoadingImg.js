@@ -36,8 +36,8 @@ function fetchImages(folderPath, className) {
 
 // 使用函數來分別處理不同的資料夾
 function FetchImages() {
-    fetchImages("image/draw", "Draw");
-    fetchImages("image/design", "Design");
+    fetchImages("../image/draw", "Draw");
+    fetchImages("../image/design", "Design");
 }
 
 FetchImages();

@@ -13,7 +13,7 @@
 /* Left */
 #Leftbar {
     height: 100vh;
-    background: #134273 url(/image/icon/Left-BG.png) no-repeat;
+    background: #134273 url(../image/icon/Left-BG.png) no-repeat;
     background-size: cover;
     box-shadow: inset -50px 0px 50px -50px #00000075;
     position: fixed;
@@ -61,11 +61,11 @@
 }
 
 .extr_link ul a:nth-child(1)::before {
-    content: url(/image/icon/IG.png);
+    content: url(../image/icon/IG.png);
 }
 
 .extr_link ul a:nth-child(2)::before {
-    content: url(/image/icon/Email.png);
+    content: url(../image/icon/Email.png);
 }
 
 /* Right */
