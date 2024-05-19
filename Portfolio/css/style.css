@@ -128,18 +128,23 @@
 
 #waterfallArea {
     width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(calc(100%/4), 1fr));
+    grid-auto-rows: 0;
 }
 
+
+
 .content_box {
-    width: calc(100%/3 - 50px);
+    width: 100%;
     margin-bottom: 15px;
     padding: 7px;
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 1px 1px #000;
-    animation: fade 2s linear 0s forwards;
+    animation: fade 0.5s linear 0s forwards;
     overflow: hidden;
-    float: left;
 }
 
 .content_box img {

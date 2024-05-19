@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Melos portfolio</title>
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/jquery-3.2.1.min.js"></script>
-    <script src="./js/masonry.pkgd.min.js"></script>
+
 
 </head>
 
@@ -38,16 +37,20 @@
             </nav>
         </header>
         <main id="Main" class="content">
-            <div>
-                <video src="./image/A.mp4" width="400" controls></video>
-            </div>
-            <section id="waterfallArea"></section>
+            <section id="waterfallArea" class="grid"></section>
         </main>
     </div>
 
     <script src="./js/LoadingImg.js"></script>
     <script src="./js/Tag.js"></script>
-    <script src="./js/masonry-setup.js"></script>
+    <script src="./js/MasonryLayout.js"></script>
+   <!-- 這是你剛才告訴我的JS -->
+
+    <script>
+        window.onload = function () {
+            loadImages(resizeAllGridItems);
+        };
+    </script>
 </body>
 
 </html>

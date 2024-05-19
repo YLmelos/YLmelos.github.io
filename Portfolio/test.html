@@ -5,123 +5,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
 </head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .grid {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(calc(100vw/4), 1fr));
+        grid-auto-rows: 0;
+    }
+
+
+    .item {
+        height: 0;
+    }
+
+    img {
+        width: 100%;
+    }
+</style>
 
 <body>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-
-        /* ---- grid-item ---- */
-
-
-        .grid-item {
-
-            width: 600px;
-
-            float: left;
-
-            border: 2px solid #333;
-
-            border-radius: 5px;
-
-            box-shadow: 0 0 10px#333;
-
-            overflow: hidden
-        }
-
-        Img {
-            width: 100%;
-        }
-    </style>
     <div class="grid">
-
-        <div class="grid-item">
-
-            <img src="./image/design/1.jpg" alt="">
-
+        <div class="item ">
+            <div class="content_box">
+                <img src="https://assets.codepen.io/881020/dog1.jpg">
+            </div>
+        </div>
+        <div class="item ">
+            <div class="content_box">
+                <img  src="https://assets.codepen.io/881020/dog3.jpg">
+            </div>
+        </div>
+        <div class="item ">
+            <div class="content_box">
+                <img  src="https://assets.codepen.io/881020/dog4.jpg">
+            </div>
+        </div>
+        <div class="item ">
+            <div class="content_box">
+                <img  src="https://assets.codepen.io/881020/dog9.jpg">
+            </div>
+        </div>
+        <div class="item ">
+            <div class="content_box">
+                <img  src="https://assets.codepen.io/881020/dog1.jpg">
+            </div>
+        </div>
+        <div class="item ">
+            <div class="content_box">
+                <img  src="https://assets.codepen.io/881020/dog3.jpg">
+            </div>
+        </div>
+        <div class="item ">
+            <div class="content_box">
+                <img  src="https://assets.codepen.io/881020/dog4.jpg">
+            </div>
+        </div>
+        <div class="item ">
+            <div class="content_box">
+                <img  src="https://assets.codepen.io/881020/dog9.jpg">
+            </div>
         </div>
 
-        <div class="grid-item">
-
-            <img src="./image/design/2.jpg" alt="">
-
-        </div>
-
-        <div class="grid-item">
-
-            <img src="./image/design/3.jpg" alt="">
-
-        </div>
-
-        <div class="grid-item">
-
-            <img src="./image/design/4.jpg" alt="">
-
-        </div>
-
-        <div class="grid-item">
-
-            <img src="./image/design/5.jpg" alt="">
-
-        </div>
-
-        <div class="grid-item">
-
-            <img src="./image/design/6.jpg" alt="">
-
-        </div>
-        <div class="grid-item">
-
-            <img src="./image/design/6.jpg" alt="">
-
-        </div>
-        <div class="grid-item">
-
-            <img src="./image/design/6.jpg" alt="">
-
-        </div>
-        <div class="grid-item">
-
-            <img src="./image/draw/1.jpg" alt="">
-
-        </div>
-        <div class="grid-item">
-
-            <img src="./image/draw/2.jpg" alt="">
-
-        </div>
-        <div class="grid-item">
-
-            <img src="./image/draw/3.jpg" alt="">
-
-        </div>
-        <div class="grid-item">
-
-            <img src="./image/draw/4.jpg" alt="">
-
-        </div>
-        <div class="grid-item">
-
-            <img src="./image/draw/5.png" alt="">
-
-        </div>
 
     </div>
 
     <script>
-        $('.grid').masonry({
+        function resizeGridItem(item) {
+            // 獲取網格容器元素
+            grid = document.getElementsByClassName("grid")[0];
 
-            itemSelector: '.grid-item',
+            // 獲取網格的行高和行間距
+            rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+            rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
 
-            columnWidth: 600
+            // 計算此項目需要佔用的行數
+            rowSpan = Math.ceil(((item.querySelector('.content_box').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap ) - 1 ));
+            // 設置此項目佔用的行數
+            item.style.gridRowEnd = "span " + rowSpan;
+        }
 
-        });
+        function resizeAllGridItems() {
+            // 獲取所有網格項目
+            allItems = document.getElementsByClassName("item");
+
+            // 遍歷所有項目並調整其大小
+            for (x = 0; x < allItems.length; x++) {
+                resizeGridItem(allItems[x]);
+            }
+        }
+
+        function resizeInstance(instance) {
+            // 獲取第一個元素
+            item = instance.elements[0];
+
+            // 調整此項目的大小
+            resizeGridItem(item);
+        }
+
+        // 當窗口加載完成後調整所有網格項目的大小
+        window.onload = resizeAllGridItems();
+
+        // 當窗口大小改變時調整所有網格項目的大小
+        window.addEventListener("resize", resizeAllGridItems);
+
+        // 獲取所有網格項目
+        allItems = document.getElementsByClassName("item");
+
     </script>
 </body>
-
-</html>
+F</html>

@@ -2,13 +2,17 @@
 var navItems = document.querySelectorAll(".nav li");
 
 function showContent(className) {
-    var allDivs = document.querySelectorAll(".content_box");
+    var allDivs = document.querySelectorAll(".item");
     allDivs.forEach(function (div) {
         div.style.display = "none";
     });
     var categoryDivs = document.querySelectorAll("." + className);
     categoryDivs.forEach(function (div) {
-        div.style.display = "block";
+        div.style.display = "none";
+        setTimeout(function(){
+            div.style.display = "block";
+            resizeAllGridItems();
+        }, 100);
     });
 }
 
@@ -25,10 +29,7 @@ navItems.forEach(function (item) {
         } else if (categoryName === "平面設計") {
             showContent("Design");
         } else {
-            showContent("content_box");
+            showContent("item");
         }
-        $(document).ready(function () {
-            setupMasonry();
-        });
     });
 });
