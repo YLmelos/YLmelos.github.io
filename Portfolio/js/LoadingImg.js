@@ -59,6 +59,10 @@ function loadImages(callback) {
                         img.onload = incrementLoadedImages;
                         img.onerror = incrementLoadedImages;
 
+                        item.addEventListener('click', () => {
+                            openModal(img.src);
+                        });
+
                         index++;
                         loadNextImage();
                     } else {

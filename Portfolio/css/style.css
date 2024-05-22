@@ -5,7 +5,7 @@
     list-style: none;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
-    transition:0.3s ease-in;
+    transition: 0.1s ease-in;
 }
 
 
@@ -50,11 +50,14 @@
     margin-bottom: 50px;
 }
 
+
 .extr_link ul li {
     font-size: 25px;
     font-weight: bold;
     color: #134273;
 }
+
+
 
 .extr_link ul a::before {
     padding: 0 10px;
@@ -63,6 +66,7 @@
 .extr_link ul a:nth-child(1)::before {
     content: url(../image/icon/IG.png);
 }
+
 
 .extr_link ul a:nth-child(2)::before {
     content: url(../image/icon/Email.png);
@@ -108,7 +112,9 @@
     font-weight: bold;
     color: #ecd4c8;
     border-radius: 10px;
+    cursor: pointer;
 }
+
 
 .nav ul .focus {
     background-color: #e5852a;
@@ -122,8 +128,8 @@
 #Main {
     min-height: 100vh;
     background-color: #ecd4c8;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 20px 0;
+
 }
 
 #waterfallArea {
@@ -145,11 +151,71 @@
     box-shadow: 0 1px 1px #000;
     animation: fade 0.5s linear 0s forwards;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .content_box img {
     width: 100%;
     border-radius: 12px;
+
+}
+
+
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    /* 固定位置 */
+    z-index: 999;
+    /* 層級 */
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    /* 滾動 */
+    background-color: #0008;
+}
+
+.modal-content {
+    width: 80%;
+    margin: 1% auto;
+    /* 中央顯示 */
+    padding: 10px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 2px 2px 5px #000;
+    background-color: #ecd4c8;
+    display: inline-table;
+}
+
+.close {
+    width: 100%;
+    height: 50px;
+    border-radius: 12px 12px 0 0;
+    background-color: #134273;
+    display: flex;
+    padding-right: 20px;
+    justify-content: right;
+    align-items: center;
+    color: #ecd4c8;
+    float: right;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.modal-content .modalImage_box{
+    width: 100%;
+    min-height: 91vh;
+    border-radius: 0 0 12px 12px;
+    background: #000;
+    display: flex;
+    align-items: center;
+}
+
+.modal-content img {
+    height: fit-content;
 }
 
 /* 動畫 */
@@ -157,7 +223,118 @@
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
+}
+
+/* hover */
+.extr_link ul a:hover {
+    background-color: #e5852a;
+}
+
+.extr_link ul a:hover li {
+    color: #ecd4c8;
+}
+
+nav ul li:hover {
+    color: #e5852a;
+}
+
+nav ul .focus:hover {
+    color: #ecd4c8;
+}
+
+.extr_link ul a:nth-child(1):hover::before {
+    content: url(../image/icon/IG-hover.png);
+}
+
+.extr_link ul a:nth-child(2):hover::before {
+    content: url(../image/icon/Email-hover.png);
+}
+
+.content_box:hover {
+    box-shadow: -1px 0px 5px #134273;
+}
+
+.close:hover,
+.close:focus {
+    color: #e5852a;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* RWD */
+
+.nav {
+    display: flex;
+}
+
+.mobile_extr_link {
+    display: none;
+    align-items: center;
+}
+
+.mobile_extr_link .ms,
+a {
+    margin-right: 15px;
+}
+
+.mobile_extr_link a {
+    width: 50px;
+    height: 50px;
+    display: block;
+    border: 2px solid #ecd4c8;
+    padding: 2px;
+    border-radius: 50%;
+}
+
+
+
+.mobile_extr_link :nth-child(1) {
+    content: url(../image/icon/IG-hover.png);
+}
+
+.mobile_extr_link :nth-child(2) {
+    content: url(../image/icon/Email-hover.png);
+}
+
+@media(max-width: 1560px) {
+    #Leftbar .ms {
+        margin: 100px 50px;
+    }
+
+    #Rightbar {
+        max-width: calc(100vw - (100vw - 100%) - 350px);
+        margin-left: 350px;
+    }
+
+    #waterfallArea {
+        grid-template-columns: repeat(auto-fill, minmax(calc(100% / 3), 1fr));
+    }
+
+    .modal-content {
+        width: 55%;
+    }
+}
+
+@media(max-width: 1280px) {
+    .modal-content {
+        width: 92%;
+    }
+
+    #Leftbar {
+        display: none;
+    }
+    .mobile_extr_link {
+        display: flex;
+    }
+    
+    #Rightbar {
+        max-width: calc(100vw - (100vw - 100%));
+        margin-left: 0;
+    }
+
+
 }

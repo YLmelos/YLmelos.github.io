@@ -29,6 +29,10 @@
     <div id="Rightbar">
         <header id="Header" class="content">
             <nav class="nav">
+                <div class="mobile_extr_link">
+                    <a href=""></a>
+                    <a href=""></a>
+                </div>
                 <ul>
                     <li class="allTag focus">全部作品</li>
                     <li class="drawTag">插畫美術</li>
@@ -41,10 +45,18 @@
         </main>
     </div>
 
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modalImage_box">
+                <img id="modalImage" onclick="event.stopPropagation()" src="" alt="Modal Image" style="width: 100%;">
+            </div>
+        </div>
+    </div>
     <script src="./js/LoadingImg.js"></script>
     <script src="./js/Tag.js"></script>
     <script src="./js/MasonryLayout.js"></script>
-   <!-- 這是你剛才告訴我的JS -->
+    <script src="./js/Modal.js"></script>
 
     <script>
         window.onload = function () {
