@@ -73,7 +73,7 @@ function loadImages(callback) {
                         div.className = `content_box`;
 
                         const img = document.createElement('img');
-                        img.src = '../image/default.jpg'; // 占位图片
+                        img.src = './image/default.jpg'; // 占位图片
                         img.setAttribute('data-src', imgUrl); // 将实际图片 URL 存储为数据属性
                         img.className = 'lazy'; // 应用延迟加载类
 
@@ -92,6 +92,10 @@ function loadImages(callback) {
                             openModal(img.getAttribute('data-src'));
                         });
 
+                        setTimeout(() => {
+                            initializeLazyLoading();
+                            resizeAllGridItems();
+                        }, 300);
                         // 移动到序列中的下一张图片
                         index++;
                         loadNextImage();
