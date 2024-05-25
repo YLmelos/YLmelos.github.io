@@ -4,10 +4,13 @@ function initializeLazyLoading() {
             if (entry.isIntersecting) {
                 const img = entry.target;
                 img.setAttribute('src', img.dataset.src);
-                setTimeout(() => {
-                    // img.removeAttribute('data-src');
-                    resizeAllGridItems();
-                }, 400);
+                console.log();
+                datasrc = img.getAttribute('data-src')
+                if (datasrc = img.dataset.src) {
+                    setTimeout(() => {
+                        resizeAllGridItems();
+                    }, 250);
+                }
                 owner.unobserve(img);
             }
         }
@@ -17,5 +20,5 @@ function initializeLazyLoading() {
     for (let image of images) {
         observer.observe(image);
     }
-    
+
 }
