@@ -14,11 +14,6 @@ function loadImages() {
     const waterfallArea = document.getElementById('waterfallArea');
     const extensions = ['.jpg', '.png', '.gif'];
 
-    const paths = [
-        { path: './image/draw/', className: 'Draw', count: 12 },
-        { path: './image/design/', className: 'Design', count: 6 }
-    ];
-
     paths.forEach(({ path, className, count }) => {
         for (let i = count; i > 0; i--) {
             function processNextImage(extIndex) {
@@ -34,13 +29,12 @@ function loadImages() {
                     }
                 });
             }
-            
-            
+
+
             setTimeout(() => {
                 processNextImage(0);
-                console.log(i);
             }, 1000 / i, count);
-            
+
         }
     });
 
@@ -53,13 +47,13 @@ function loadImages() {
 
         const lazyImg = document.createElement('img');
         lazyImg.src = './image/default.jpg';
+
         lazyImg.setAttribute('data-src', imgUrl);
         lazyImg.className = 'lazy';
 
         div.appendChild(lazyImg);
         item.appendChild(div);
         waterfallArea.appendChild(item);
-
         resizeAllGridItems();
         item.addEventListener('click', () => {
             openModal(lazyImg.getAttribute('data-src'));
@@ -69,3 +63,7 @@ function loadImages() {
         }, 270);
     }
 }
+
+window.onload = function () {
+        loadImages(resizeAllGridItems);
+};

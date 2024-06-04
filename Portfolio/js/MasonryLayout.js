@@ -9,7 +9,9 @@ function resizeGridItem(item) {
 function resizeAllGridItems() {
     const allItems = document.getElementsByClassName("item");
     for (let x = 0; x < allItems.length; x++) {
-        resizeGridItem(allItems[x]);
+        setTimeout(() => {
+            resizeGridItem(allItems[x]);
+        },100);
     }
 }
 
