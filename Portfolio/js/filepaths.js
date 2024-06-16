@@ -1,5 +1,5 @@
 const paths = [
-    { path: './image/draw/', className: 'Draw', count: 13 },
+    { path: './image/draw/', className: 'Draw', count: 14 },
     { path: './image/design/', className: 'Design', count: 11 }
 ];
 
